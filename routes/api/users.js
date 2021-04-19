@@ -5,8 +5,10 @@ const User = require('../../models/User');
 const keys = require('../../config/keys');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-// const validateRegisterInput = require('../../validations/register');
-// const validateLoginInput = require('../../validations/login');
+
+const validateRegisterInput = require('../../validations/register');
+const validateLoginInput = require('../../validations/login');
+
 router.get("/test", (req, res) => {
   res.json({ msg: "This is the user route" });
 });
@@ -16,9 +18,11 @@ router.get("/current", passport.authenticate("jwt", { session: false }), (req, r
         id: req.user.id,
         email: req.user.email
     });
-})
-router.post("/register", (req, res) => {
+});
 
+router.post("/register", (req, res) => {
+  const {errors, isValid} = validateRegisterInput(req.body);
+  if(!isValid){return res.status(400).json(errors)};
 
   User.findOne({ email: req.body.email })
     .then(user => {
@@ -27,7 +31,8 @@ router.post("/register", (req, res) => {
       } else {
         const newUser = new User({
           email: req.body.email,
-          password: req.body.password
+          password: req.body.password, 
+          password2: req.body.password2
         })
 
         bcrypt.genSalt(10, (err, salt) => {
@@ -41,18 +46,17 @@ router.post("/register", (req, res) => {
         })
     }
   })
-})
+});
 
 router.post('/login', (req, res) => {
-  // const { errors, isValid } = validateLoginInput(req.body);
-  
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
-  
+
   const email = req.body.email;
   const password = req.body.password;
-
+  const { errors, isValid } = validateLoginInput(req.body);
+  
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
   User.findOne({ email })
     .then(user => {
       if (!user) {
@@ -81,5 +85,6 @@ router.post('/login', (req, res) => {
           }
       })
   })
-})   
+});
+
  module.exports = router;
