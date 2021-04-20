@@ -35,7 +35,8 @@ import { logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
-
+  
+ // window.store = configureStore();
   
   if (localStorage.jwtToken) {
     setAuthToken(localStorage.jwtToken);

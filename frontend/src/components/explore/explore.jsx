@@ -1,27 +1,27 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import ExploreItem from './explore_item';
+// import React from 'react';
+// import { withRouter } from 'react-router-dom';
+// import ExploreItem from './explore_item';
 
-class Explore extends React.Component {
+// class Explore extends React.Component {
   
    
-  componentWillMount() {
-    this.props.fetchAllExcites()
-  }
+//   componentWillMount() {
+//     this.props.fetchAllExcites()
+//   }
 
-  render() {
+//   render() {
 
-    return (
-      <div>
-        <p>Excites</p>
-        {
-          this.props.excites.map( (excite, id) => (
-            < ExploreItem excite={excite} key={id} addExcite={this.props.addExcite}/>
-          ))
-        }
-      </div>
-    )
-  }
-}
+//     return (
+//       <div>
+//         <p>Excites</p>
+//         {
+//           this.props.excites.map( (excite, id) => (
+//             < ExploreItem excite={excite} key={id} addExcite={this.props.addExcite}/>
+//           ))
+//         }
+//       </div>
+//     )
+//   }
+// }
 
-export default withRouter(Explore);
+// export default withRouter(Explore);
