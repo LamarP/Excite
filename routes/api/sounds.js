@@ -46,7 +46,7 @@ router.get('/', async (req, res) => {
 router.get('/sound', async (req, res) => {
     const token = await _getAuthToken();
     const track = await _getTrack(token, req.query.trackId)
-    console.log(req.query)
+    
     return res.json(track)
 
 });

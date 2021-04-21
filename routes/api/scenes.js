@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fetch = require("node-fetch");
 const apiKey = require("../../config/keys");
-const Scene = require("../../models/Scene");
+
 const collectionId = require("../../config/keys").collectionId;
 const _getVideo = async (videoId) => {
   const result = await fetch(`https://api.pexels.com/videos/videos/${videoId}`,
@@ -25,18 +25,15 @@ const _getCollections = async () => {
 
 router.get("/scene", async (req, res) => {
   const video = await _getVideo(req.query.videoId);
-  // console.log(req.query);
   return res.json(video);
 })
 
 router.get("/", async (req, res) => {
   const collection = await _getCollections();
-  // console.log(req.query);
   return res.json(collection);
 })
 
 router.post("/test", (req, res) => {
-  // console.log(req.body);
   const newScene = new Scene({
     sceneId: req.body.sceneId,
     name: req.body.name
@@ -48,7 +45,7 @@ router.post("/test", (req, res) => {
         data
       });
     })
-    .catch(err => res.json(err))
+    .catch(err => console.log(err))
   
 })
 
