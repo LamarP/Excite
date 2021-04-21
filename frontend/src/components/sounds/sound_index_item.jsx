@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//import eye from '../../public/eye.mp3';
 
 class SoundIndexItem extends React.Component {
 
-  // componentDidMount() {
-  //   // debugger
-  //   if(this.props.track.id) {
-  //   this.props.fetchTrack(this.props.track.id)
-  //   }
-  // }
+  componentDidMount() {
+    // debugger
+    
+      this.props.fetchTrack()
+  
+  }
 
   render() {
     // debugger
@@ -18,9 +19,9 @@ class SoundIndexItem extends React.Component {
     return(
       <div>
 
-        <button onClick={() => (this.props.fetchTrack(this.props.track.id))}>{this.props.track.name}</button>
+        {/* <button onClick={() => (this.props.fetchTrack(this.props.track.id))}>{this.props.track.name}</button> */}
 
-        {/* <audio type='audio/mpeg' src={this.props.track.href} controls></audio> */}
+        <audio type='audio/mpeg' controls></audio>
         {/* <iframe src={this.props.track.external_urls.spotify} ></iframe> */}
       </div>
     )

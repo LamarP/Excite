@@ -9,7 +9,7 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => ({
   fetchPlaylist: () => dispatch(fetchPlaylist()),
-  fetchTrack: (trackId) => dispatch(fetchTrack(trackId))
+  fetchTrack: () => dispatch(fetchTrack())
 })
 
 export default connect(mSTP,mDTP)(SoundIndex);

@@ -48,7 +48,10 @@ router.get('/sound', async (req, res) => {
     const track = await _getTrack(token, req.query.trackId)
     console.log(req.query)
     return res.json({token, track})
-
 });
+
+// router.get('/sound', async (req, res) => {
+//     res.sendFile('./frontend/public/eye.mp3', { root: __dirname });
+// });
 
 module.exports = router;
