@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const spotifyKeys = require('../../config/spotify_keys');
+const spotifyKeys = require('../../config/keys');
 const fetch = require("node-fetch");
 
 const _getAuthToken =  async () => {
