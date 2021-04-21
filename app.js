@@ -6,11 +6,18 @@ const users = require('./routes/api/users');
 const sounds = require('./routes/api/sounds');
 const passport = require('passport');
 const scenes = require('./routes/api/scenes');
+const path = require('path');
+
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
 
 app.get("/", (req, res) => res.send("new message"));
 
