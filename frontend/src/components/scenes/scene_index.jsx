@@ -1,0 +1,27 @@
+import React from 'react';
+import SceneIndexItem from './scene_index_item';
+
+class SceneIndex extends React.Component {
+
+
+  componentWillMount() {
+    this.props.fetchScenes()
+  }
+
+  render() {
+    console.log(this.props.scenes)
+    if(!this.props.scenes) return null;
+    return(
+      <div>
+        {
+          this.props.scenes.map((ele,id) => {
+            return <SceneIndexItem key={id} scene={ele} sceneId={ele.id}/>
+          })
+        }
+      </div>
+    )
+  }
+
+}
+
+export default SceneIndex;
