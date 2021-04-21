@@ -9,6 +9,7 @@ class SoundIndex extends React.Component {
   }
 
   render() {
+    // debugger
     console.log(this.props)
     if(!this.props.playlist) {return null};
     return(

@@ -17,7 +17,7 @@ const _getAuthToken =  async () => {
 };
 
 const _getPlaylist = async (token) => {
-    const result =  await fetch("https://api.spotify.com/v1/playlists/0LkCTHKqszwTTe6pY0ZM83", {
+    const result =  await fetch("https://api.spotify.com/v1/playlists/0LkCTHKqszwTTe6pY0ZM83?market=US", {
         method: 'GET', 
         headers: { 'Authorization' : 'Bearer ' + token }
     });
@@ -26,7 +26,7 @@ const _getPlaylist = async (token) => {
 };
 
 const _getTrack = async (token, trackId) => {
-    const result = await fetch(`https://api.spotify.com/v1/tracks/${trackId}`, {
+    const result = await fetch(`https://api.spotify.com/v1/tracks/${trackId}?market=US`, {
         method: 'GET', 
         headers: { 'Authorization' : 'Bearer ' + token }
     });
@@ -47,7 +47,7 @@ router.get('/sound', async (req, res) => {
     const token = await _getAuthToken();
     const track = await _getTrack(token, req.query.trackId)
     console.log(req.query)
-    return res.json(track)
+    return res.json({token, track})
 
 });
 
