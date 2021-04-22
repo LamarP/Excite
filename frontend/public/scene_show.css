@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 /* styles for the scenes */
 * {
         margin: 0;
@@ -8,6 +10,7 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
+        font-family: Arial, Helvetica, sans-serif;  /* <<-- Terry added */
     }
 
 .vid {
@@ -57,14 +60,17 @@ body {
 .wrapper input {
   width: 100%;
   margin-bottom: 20px;
-  background-color: rgba(240,240,240,0.2);
+  background-color: rgba(240, 240, 240, 0.507);
 }
 
 .wrapper p {
   font-weight: bold;
-  font-size: 13px;
-  /* margin-left: 42%; */
-  font-size: 35px;
+  /* font-size: 13px; */
+  /* margin-left: -50%; */
+  font-size: 47px;  /* <<-- Terry adjusted */
+  text-align: center;
+  margin-bottom: 40px;   /* <<-- Terry added */
+  color: #ddd;
 }
 
 .wrapper input[type=text], .wrapper input[type=password] {
@@ -75,21 +81,32 @@ body {
   height:  30px;
   font-size:  16px;
   opacity: 1;
-  color: #ccc
+  color: rgb(255, 255, 255);
+  /* text-shadow: .5px .5px #000; */
 }
 
-.wrapper input[type=submit]  {
+.wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.685);
+}
+
+/* input[type=submit] */
+.wrapper button {
   border: none;
   outline:  none;
   height: 40px;
-  background: #f6648b;
+  background: #f6648bd3;
   font-size: 14px;
   font-weight: bold;
-}
-
-.wrapper input[type=submit]:hover {
+  /*  */
+  width: 100%;
+  margin-bottom: 20px;
+  /* background-color: rgba(240,240,240,0.2); */
   cursor: pointer;
 }
+
+/* .wrapper input[type=submit]:hover {
+  cursor: pointer;
+} */
 
 .wrapper a {
   font-size: 14px;
@@ -118,3 +135,57 @@ body {
 
 }
 
+.auth-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.auth-button span:after {
+  content: '\27A4';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+    /* color: #ddd; */
+}
+
+/* .auth-button span:hover {
+  color: #ddd;
+} */
+
+.auth-button:hover span {
+  padding-right: 25px;
+}
+
+.auth-button:hover span:after {
+  opacity: 1;
+  right: 0;
+    color: #ddd;
+}
+
+.auth-button:hover {
+  background-color: #f6648b;
+  color: #ddd;
+}
+
+/* Terry added 04/21/21 */
+
+.wrapper input:hover {
+  border-bottom: 1px solid white;
+}
+
+.wrapper input:hover::placeholder {
+  color: white;
+}
+
+.header-title {
+ position: fixed; /* or absolute */
+  top: 2%;
+  left: 39.5%;
+  font-size: 180px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+}
