@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SoundIndexItem from './sounds_index_item';
 
 export default class SoundsIndex extends React.Component {
     constructor(props) {
@@ -12,14 +12,19 @@ export default class SoundsIndex extends React.Component {
 
 
     componentDidMount() {
-        this.props.fetchSound('lookback')
+        this.props.fetchSounds()
         
     }
     render() {
-        if(!this.props.sound.config) {return null}
+      if (!this.props.sounds) { return null; }
+      const soundItems = this.props.sounds.map((sound, idx) => {
+        return <SoundIndexItem key={idx} soundId={idx} fetchSound={this.props.fetchSound} sound={sound}/>  
+      })
         return (
            <div>
-               <audio src={this.props.sound.config.url} controls></audio>
+            <ul>
+              {soundItems}
+               </ul>
            </div>
         )
     }

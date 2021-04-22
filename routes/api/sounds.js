@@ -9,7 +9,7 @@ router.get('/lookback',(req, res) => {
 });
 
 router.get('/', (req, res) => {
-    fs.readdir(path.join(__dirname, '../../frontend/public/songs'), (err, files) => console.log(files));
+    fs.readdir(path.join(__dirname, '../../frontend/public/songs'), (err, files) => res.send(files));
 });
 
 

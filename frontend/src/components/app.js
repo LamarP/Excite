@@ -8,7 +8,7 @@ import NavBarContainer from './nav/navbar_container';
 import ProfileContainer from './Home/profile_container';
 import ScenesContainer from './scenes/scene_index_container';
 import SoundsIndexContainer from './sounds/sounds_index_container';
-
+import SoundsShowContainer from './sounds/sound_show_container';
 const App = () => (
     <div>
       <header>
@@ -21,7 +21,8 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path='/scenes' component={ScenesContainer} />
-        <Route exact path='/sounds' component={SoundsIndexContainer}/>
+        <Route exact path='/sounds' component={SoundsIndexContainer} />
+        <Route exact path='/sounds/:soundId' component={SoundsShowContainer}/>
      </Switch>
     </div>
 

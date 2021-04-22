@@ -10,7 +10,7 @@ const receiveSound = sound => ({
 
 const receiveSounds = sounds => ({
     type: RECEIVE_SOUNDS, 
-    sounds
+  sounds: sounds
 })
 
 const receiveSoundErrors = err => ({
@@ -24,8 +24,8 @@ export const fetchSound = sound => dispatch => (
         .catch(err => dispatch(receiveSoundErrors(err)))  
 );
 
-export const fetchSounds = sounds => dispatch => (
-    SoundUtil.fetchSounds(sounds)
-        .then(sounds => receiveSounds(sounds))
+export const fetchSounds = () => dispatch => (
+    SoundUtil.fetchSounds()
+        .then((sounds) => dispatch(receiveSounds(sounds)))
         .catch(err => dispatch(receiveSoundErrors(err)))
 );
