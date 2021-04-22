@@ -18,16 +18,23 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             return (
                 <div>
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>
+                        <h1  className='header-title' >Excite</h1>
+                    </Link>
                     <Link to={'/'}>Profile</Link>
                     <Link to={'/explore'}>Explore</Link>
+                    <Link to={'/scenes'}>Scenes</Link>   
                     <button onClick={this.logoutUser}>Logout</button>
                 </div>
             );
         } else {
             return (
                 <div>
-                    <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link>
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>
+                        <h1  className='header-title' >Excite</h1>
+                    </Link>
+                    {/* <Link to={'/signup'}>Signup</Link>
+                    <Link to={'/login'}>Login</Link> */}
                 </div>
             );
         }
@@ -36,7 +43,9 @@ class NavBar extends React.Component {
     render() {
         return (
             <div>
-                <h1>Excite</h1>
+                {/* <Link to={'/'} style={{ textDecoration: 'none' }}>
+                    <h1  className='header-title' >Excite</h1>
+                </Link> */}
                 { this.getLinks() }
             </div>
         );
