@@ -22,7 +22,7 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path='/scenes' component={ScenesContainer} />
         <Route exact path='/sounds' component={SoundsIndexContainer} />
-        <Route exact path='/sounds/:soundId' component={SoundsShowContainer}/>
+        <Route exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
      </Switch>
     </div>
 
