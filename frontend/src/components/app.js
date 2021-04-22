@@ -6,21 +6,22 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavBarContainer from './nav/navbar_container';
 import ProfileContainer from './Home/profile_container';
-import ScenesContainer from './scenes/scene_index_container';
-
+import SceneIndexContainer from './scenes/scene_index_container';
+import SceneShowContainer from './scenes/scene_show_container';
 
 const App = () => (
     <div>
-      <header>
+      {/* <header> */}
           <NavBarContainer />
-      </header>
+      {/* </header> */}
     
 
      <Switch>
         <ProtectedRoute exact path="/" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path='/scenes' component={ScenesContainer} />
+        <Route exact path='/scenes' component={SceneIndexContainer} />
+        <Route exact path='/scenes/:id' component={SceneShowContainer} />
      </Switch>
     </div>
 
