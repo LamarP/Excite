@@ -1,13 +1,26 @@
 import React from 'react';
 
+
 export default class SoundsIndex extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            playing: false
+        }
+        // this.handleClick = this.handleClick.bind(this);
+    }
+
+
     componentDidMount() {
-        this.props.fetchSound('lookback');
+        this.props.fetchSound('lookback')
+        
     }
     render() {
-        console.log(this.props)
+        if(!this.props.sound.config) {return null}
         return (
-            <div>soundsIndex</div>
+           <div>
+               <audio src={this.props.sound.config.url} controls></audio>
+           </div>
         )
     }
 };
