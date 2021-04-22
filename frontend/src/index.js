@@ -33,7 +33,7 @@ import { setAuthToken } from './util/session_api_util';
 
 import { logout } from './actions/session_actions';
 
-
+import * as SoundUtil from './util/sound_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore({});
   }
   
-
+  window.fetchSounds = SoundUtil.fetchSounds;
   const root = document.getElementById('root');
 
   ReactDOM.render(<Root store={store} />, root);

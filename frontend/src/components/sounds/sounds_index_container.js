@@ -1,4 +1,4 @@
-import {fetchSound} from '../../actions/sound_actions';
+import {fetchSound, fetchSounds} from '../../actions/sound_actions';
 import SoundsIndex from './sounds_index';
 import {connect} from 'react-redux';
 const mSTP = state => ({
@@ -6,7 +6,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-    fetchSound: soundTitle => dispatch(fetchSound(soundTitle))
+    fetchSound: soundTitle => dispatch(fetchSound(soundTitle)),
+    fetchSounds: () => dispatch(fetchSounds())
 });
 
 export default connect(mSTP, mDTP)(SoundsIndex);
