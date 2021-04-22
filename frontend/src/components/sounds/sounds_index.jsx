@@ -1,5 +1,5 @@
 import React from 'react';
-import SoundIndexItem from './sounds_index_item';
+import SoundsIndexItem from './sounds_index_item';
 
 export default class SoundsIndex extends React.Component {
     constructor(props) {
@@ -7,7 +7,6 @@ export default class SoundsIndex extends React.Component {
         this.state = {
             playing: false
         }
-        // this.handleClick = this.handleClick.bind(this);
     }
 
 
@@ -17,13 +16,13 @@ export default class SoundsIndex extends React.Component {
     }
     render() {
       if (!this.props.sounds) { return null; }
-      const soundItems = this.props.sounds.map((sound, idx) => {
-        return <SoundIndexItem key={idx} soundId={idx} fetchSound={this.props.fetchSound} sound={sound}/>  
-      })
+      const soundItems = this.props.sounds.map((sound, idx) => (
+        <SoundsIndexItem key={idx} soundId={idx} fetchSound={this.props.fetchSound} sound={sound}/>  
+      ))
         return (
            <div>
-            <ul>
-              {soundItems}
+                <ul>
+                    {soundItems}
                </ul>
            </div>
         )
