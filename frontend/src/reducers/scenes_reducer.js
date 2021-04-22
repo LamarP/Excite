@@ -6,7 +6,8 @@ const ScenesReducer = (state = {}, action) => {
     case RECEIVE_ALL_SCENES:
       return Object.assign({}, action.scenes);
     case RECEIVE_SCENE:
-      return Object.assign({}, {[action.scene.id]: action.scene});
+      return Object.assign({}, {[action.scene.data.id]: action.scene});
+      // return action.scene
     default:
       return state;
   }

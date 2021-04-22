@@ -65,32 +65,41 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div className="signup-form-container">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="signup-form">
-                        <br />
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            placeholder="Email"
-                        />
-                        <br />
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                        />
-                        <br />
-                        <input type="password"
-                            value={this.state.password2}
-                            onChange={this.update('password2')}
-                            placeholder="Confirm Password"
-                        />
-                        <br />
-                        <input type="submit" value="Submit" />
-                        {this.renderErrors()}
-                    </div>
-                </form>
+            <div>
+                <div className="wrapper">
+                    <p>Sign Up</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="signup-form">
+                            {/* <br /> */}
+                            <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                                placeholder="Email"
+                            />
+                            {/* <br /> */}
+                            <input type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                placeholder="Password"
+                            />
+                            {/* <br /> */}
+                            <input type="password"
+                                value={this.state.password2}
+                                onChange={this.update('password2')}
+                                placeholder="Confirm Password"
+                            />
+                            {/* <br /> */}
+                            {/* <input type="submit" value="Submit" /> */}
+                            <button className='auth-button'><span>Submit</span></button>
+                            {this.renderErrors()}
+                        </div>
+                    </form>
+                    <div className='bottom-text'></div>
+                </div>
+                <div className='overlay-area'></div>
+                <video onClick={this.handleClick}
+                    src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
+                    autoPlay muted loop className='session-vid' type='video/mp4'></video>
             </div>
         );
     }
