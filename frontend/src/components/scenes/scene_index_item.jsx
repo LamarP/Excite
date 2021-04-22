@@ -8,7 +8,7 @@ class SceneIndexItem extends React.Component {
     console.log(this.props.scene)
     return(
       <div>
-        <Link to={`/scenes/${this.props.sceneId}`} >
+        <Link to={`/scenes/${this.props.sceneId}`}>
           <figure>
             <img src={this.props.scene.image} width='360' height='240' alt=""/>
           </figure>

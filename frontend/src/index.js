@@ -64,5 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const root = document.getElementById('root');
 
+  
+
+
   ReactDOM.render(<Root store={store} />, root);
 });
+
+
+// window.onload = function() {    var backgroundAudio=document.getElementById("my-audio");    
+
+//     backgroundAudio.volume=0.1; 
+//     backgroundAudio.play();
+
+//   }

@@ -205,3 +205,57 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.header {
+  width: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+
+.header ul {
+  text-align: center;
+}
+
+
+.header ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+
+.header ul li .link {
+  display:  block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:  #fff;
+  font-size:  20px;
+  letter-spacing: 2px;
+  font-weight:  600;
+  padding: 25px;
+  transition: all ease 0.5s;
+}
+
+.header ul li .link:hover {
+  background-color: #211b4385;
+}
+
+.logo {
+ position: absolute;
+ top: 1%;
+ left: 3%;
+ /* padding-top: 25px;
+ padding-left: 25px; */
+ 
+  
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+}
+
+.logout {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding-top: 25px;
+ 
+  padding-right: 30px;
+}
