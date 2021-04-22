@@ -29,12 +29,10 @@ class NavBar extends React.Component {
             );
         } else {
             return (
-                <div>
+                <div className="navbar-parent">
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
                         <h1  className='header-title' >Excite</h1>
                     </Link>
-                    {/* <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link> */}
                 </div>
             );
         }
@@ -43,9 +41,6 @@ class NavBar extends React.Component {
     render() {
         return (
             <div>
-                {/* <Link to={'/'} style={{ textDecoration: 'none' }}>
-                    <h1  className='header-title' >Excite</h1>
-                </Link> */}
                 { this.getLinks() }
             </div>
         );

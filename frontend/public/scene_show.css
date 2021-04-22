@@ -10,7 +10,8 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
-        font-family: Arial, Helvetica, sans-serif;  /* <<-- Terry added */
+        /* font-family: Arial, Helvetica, sans-serif;  <<-- Terry added */
+        font-family: "Helvetica Neue";
     }
 
 .vid {
@@ -67,9 +68,9 @@ body {
   font-weight: bold;
   /* font-size: 13px; */
   /* margin-left: -50%; */
-  font-size: 47px;  /* <<-- Terry adjusted */
+  font-size: 47px; 
   text-align: center;
-  margin-bottom: 40px;   /* <<-- Terry added */
+  margin-bottom: 28px;   
   color: #ddd;
 }
 
@@ -82,7 +83,6 @@ body {
   font-size:  16px;
   opacity: 1;
   color: rgb(255, 255, 255);
-  /* text-shadow: .5px .5px #000; */
 }
 
 .wrapper input::placeholder {
@@ -122,6 +122,17 @@ body {
 
 .bottom-text {
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bottom-text:hover {
+  text-decoration: underline;
+  color: #f6648b;
 }
 
 .overlay-area {
@@ -158,12 +169,13 @@ body {
 
 .auth-button:hover span {
   padding-right: 25px;
+    text-decoration: underline;
 }
 
 .auth-button:hover span:after {
   opacity: 1;
   right: 0;
-    color: #ddd;
+  color: #ddd;
 }
 
 .auth-button:hover {
@@ -171,7 +183,6 @@ body {
   color: #ddd;
 }
 
-/* Terry added 04/21/21 */
 
 .wrapper input:hover {
   border-bottom: 1px solid white;
@@ -182,10 +193,15 @@ body {
 }
 
 .header-title {
- position: fixed; /* or absolute */
-  top: 2%;
-  left: 39.5%;
+  display: inline-block;
+  text-align: center;
   font-size: 180px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
+}
+
+.navbar-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
