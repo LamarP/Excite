@@ -9,6 +9,10 @@ import ProfileContainer from './Home/profile_container';
 import ScenesContainer from './scenes/scene_index_container';
 import SoundsIndexContainer from './sounds/sounds_index_container';
 import SoundsShowContainer from './sounds/sound_show_container';
+import SceneIndexContainer from './scenes/scene_index_container';
+import SceneShowContainer from './scenes/scene_show_container';
+
+
 const App = () => (
     <div>
       <header>
@@ -20,9 +24,10 @@ const App = () => (
         <ProtectedRoute exact path="/" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path='/scenes' component={ScenesContainer} />
         <Route exact path='/sounds' component={SoundsIndexContainer} />
         <Route exact path='/sounds/:soundId' component={SoundsShowContainer}/>
+        <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
+        <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
      </Switch>
     </div>
 
