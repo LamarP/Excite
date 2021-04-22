@@ -56,26 +56,50 @@ class LoginForm extends React.Component {
 
     render() {
         return (
+            <React.Fragment>
             <div>
+            <div className='wrapper'>
+                <p>Login</p>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    {/* <div> */}
+                    <label>Email
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
                             placeholder="Email"
                         />
-                        <br />
+                    </label>
+                        {/* <br /> */}
+                    <label>Password
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             placeholder="Password"
                         />
-                        <br />
-                        <input type="submit" value="Submit" />
+                        {/* <br /> */}
+                    </label>
+                        <input type="submit" value="Submit"/>
                         {this.renderErrors()}
-                    </div>
+                    {/* </div> */}
                 </form>
+                <div className='bottom-text'>
+                  {/* Link to other form */}
+                </div>
+                
+
+                {/* <video src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
+                  className='session-vid' autoplay muted loop type='video/mp4'>
+                </video> */}
+
+                
             </div>
+             <div className='overlay-area'></div>
+                <video onClick={this.handleClick}
+                    src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
+                    autoPlay muted loop className='session-vid' type='video/mp4'></video>
+        </div>
+         
+    </React.Fragment>
         );
     }
 }

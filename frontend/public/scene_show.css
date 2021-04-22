@@ -1,3 +1,5 @@
+
+/* styles for the scenes */
 * {
         margin: 0;
         padding: 0;
@@ -17,9 +19,102 @@
   left: 0;
 }
 
+/* 
 body {
   display: flex;
   height: 100vh;
   margin: 0;
-  /* white-space-collapse: discard; */
+} /*
+
+
+
+/* styles for the session forms */
+.session-vid {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
+
+.wrapper {
+  width: 400px;
+  height: 420px;
+  color: #000;
+  top: 50%;
+  left: 50%;
+  padding: 60px 30px;
+  position: absolute;
+  transform:  translate(-50%, -50%);
+  box-sizing: border-box;
+  box-shadow: 8px 8px 50px black;
+  background-color: rgba(240,240,240,0.2);
+  border-radius: 12px;
+}
+
+.wrapper input {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: rgba(240,240,240,0.2);
+}
+
+.wrapper p {
+  font-weight: bold;
+  font-size: 13px;
+  /* margin-left: 42%; */
+  font-size: 35px;
+}
+
+.wrapper input[type=text], .wrapper input[type=password] {
+  border:  none;
+  border-bottom:  1px solid #ddd;
+  background:  transparent;
+  outline:  none;
+  height:  30px;
+  font-size:  16px;
+  opacity: 1;
+  color: #ccc
+}
+
+.wrapper input[type=submit]  {
+  border: none;
+  outline:  none;
+  height: 40px;
+  background: #f6648b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.wrapper input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.wrapper a {
+  font-size: 14px;
+  text-decoration:  none;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.wrapper a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.bottom-text {
+  color: #fff;
+}
+
+.overlay-area {
+  position:  absolute;
+  background-color: rgba(0,0,0,0.4);
+  z-index: -5;
+  height: 100%;
+  width:  100%;
+  top: 0;
+  bottom: 0;
+
+}
+
