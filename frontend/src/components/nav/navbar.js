@@ -19,7 +19,7 @@ class NavBar extends React.Component {
             return (
                 <div>
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
-                        <h1  className='header-title' >Excite</h1>
+                        <h1>Excite</h1>
                     </Link>
                     <Link to={'/'}>Profile</Link>
                     <Link to={'/explore'}>Explore</Link>

@@ -6,7 +6,6 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavBarContainer from './nav/navbar_container';
 import ProfileContainer from './Home/profile_container';
-import ScenesContainer from './scenes/scene_index_container';
 import SoundsIndexContainer from './sounds/sounds_index_container';
 import SoundsShowContainer from './sounds/sound_show_container';
 import SceneIndexContainer from './scenes/scene_index_container';
@@ -25,7 +24,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path='/sounds' component={SoundsIndexContainer} />
-        <Route exact path='/sounds/:soundId' component={SoundsShowContainer}/>
+        <Route exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
         <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
         <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
      </Switch>

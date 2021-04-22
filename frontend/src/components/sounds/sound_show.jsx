@@ -29,6 +29,7 @@ class SoundShow extends React.Component {
         <ReactAudioPlayer
           src={this.props.sounds.config.url}
           id="audio-player"
+          controls
           autoPlay
           onPlay={document.addEventListener('click', this.handleClick)}
         />
