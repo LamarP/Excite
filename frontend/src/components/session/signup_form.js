@@ -94,7 +94,11 @@ class SignupForm extends React.Component {
                             {this.renderErrors()}
                         </div>
                     </form>
-                    <div className='bottom-text'></div>
+                    <div className='bottom-text'>
+                        <div onClick={() => this.props.history.push('/login')}>
+                            Already have an account? Login Here!
+                        </div>
+                    </div>
                 </div>
                 <div className='overlay-area'></div>
                 <video onClick={this.handleClick}

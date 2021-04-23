@@ -10,7 +10,8 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
-        font-family: Arial, Helvetica, sans-serif;  /* <<-- Terry added */
+        /* font-family: Arial, Helvetica, sans-serif;  <<-- Terry added */
+        font-family: "Helvetica Neue";
     }
 
 .vid {
@@ -20,6 +21,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 
 /* 
@@ -67,9 +69,9 @@ body {
   font-weight: bold;
   /* font-size: 13px; */
   /* margin-left: -50%; */
-  font-size: 47px;  /* <<-- Terry adjusted */
+  font-size: 47px; 
   text-align: center;
-  margin-bottom: 40px;   /* <<-- Terry added */
+  margin-bottom: 28px;   
   color: #ddd;
 }
 
@@ -82,7 +84,6 @@ body {
   font-size:  16px;
   opacity: 1;
   color: rgb(255, 255, 255);
-  /* text-shadow: .5px .5px #000; */
 }
 
 .wrapper input::placeholder {
@@ -122,6 +123,17 @@ body {
 
 .bottom-text {
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bottom-text:hover {
+  text-decoration: underline;
+  color: #f6648b;
 }
 
 .overlay-area {
@@ -158,12 +170,13 @@ body {
 
 .auth-button:hover span {
   padding-right: 25px;
+    text-decoration: underline;
 }
 
 .auth-button:hover span:after {
   opacity: 1;
   right: 0;
-    color: #ddd;
+  color: #ddd;
 }
 
 .auth-button:hover {
@@ -171,7 +184,6 @@ body {
   color: #ddd;
 }
 
-/* Terry added 04/21/21 */
 
 .wrapper input:hover {
   border-bottom: 1px solid white;
@@ -182,10 +194,123 @@ body {
 }
 
 .header-title {
- position: fixed; /* or absolute */
-  top: 2%;
-  left: 39.5%;
+  display: inline-block;
+  text-align: center;
   font-size: 180px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
+}
+
+.navbar-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: rgba(0,0,0,.2);
+}
+
+.header ul {
+  text-align: center;
+}
+
+
+.header ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+
+.header ul li .link {
+  display:  block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:  #fff;
+  font-size:  20px;
+  letter-spacing: 2px;
+  font-weight:  600;
+  transition: all ease 0.5s;
+  padding: 25px;
+}
+
+.header ul li .link:hover {
+  background-color: #f6648b;
+}
+
+.logo {
+ position: absolute;
+ top: 1%;
+ left: 3%;
+ /* padding-top: 25px;
+ padding-left: 25px; */
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  color: #ff3168;
+}
+
+.logout {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:  #fff;
+  font-size:  20px;
+  letter-spacing: 2px;
+  font-weight:  600;
+  transition: all ease 0.5s;
+}
+
+.logout:hover {
+  background-color: #f6648b;
+  cursor: pointer;
+}
+
+.scene-index {
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  text-decoration: none; */
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-top: 120px;
+}
+
+.scene-index-item {
+  /* color: black; */
+  cursor: pointer;
+  /* margin: 18px; */
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 0 32%;
+  border-style: rgb(87, 86, 86) solid;
+  border-radius: 12px;
+  align-items: center;
+  border-width: 0.5px;
+  /* background-color: #eee; */
+  opacity: 1;
+  text-align: center;
+}
+
+.scene-index-item img {
+  border-radius: 16px;
+}
+
+.scene-index-item img:hover {
+   transform: scale(1.03);
 }
