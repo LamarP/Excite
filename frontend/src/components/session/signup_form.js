@@ -1,5 +1,9 @@
 import React from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Redirect, withRouter, Link } from 'react-router-dom';
+import song from '../../One Ok Rock Onion English Sub.mp3';
+import ReactAudioPlayer from 'react-audio-player';
+
+
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -17,7 +21,7 @@ class SignupForm extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.signedIn === true) {
-            this.props.history.push('/');
+            this.props.history.push('/profile');
         }
 
         this.setState({ errors: nextProps.errors });
@@ -101,9 +105,23 @@ class SignupForm extends React.Component {
                     </div>
                 </div>
                 <div className='overlay-area'></div>
-                <video onClick={this.handleClick}
+                {/* <video onClick={this.handleClick}
                     src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
-                    autoPlay muted loop className='session-vid' type='video/mp4'></video>
+                    autoPlay muted loop className='session-vid' type='video/mp4'></video> */}
+                <div className="navbar-parent">
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>
+                        <h1  className='header-title' >Excite</h1>
+                    </Link>
+                </div>
+                {/* <audio autoPlay>
+                    <source src={song} type="audio/mp3"/>
+                </audio> */}
+                <ReactAudioPlayer 
+                    autoPlay 
+                    src={song} 
+                    type="audio/mp3"
+                    volume={0.1}
+                />
             </div>
         );
     }

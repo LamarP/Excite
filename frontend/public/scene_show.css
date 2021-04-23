@@ -386,9 +386,16 @@ body {
 }
 
 .landing-title {
-  display: inline-block;
-  text-align: center;
+  /* display: inline-block;
+  text-align: center; */
   font-size: 300px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
+  position: fixed; /* or absolute */
+  top: 45%;
+  left: 50%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
+   transform: translate(-50%, -50%);
+   text-shadow: 2px 2px 4px black;
 }

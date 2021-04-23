@@ -10,6 +10,7 @@ import SoundsIndexContainer from './sounds/sounds_index_container';
 import SoundsShowContainer from './sounds/sound_show_container';
 import SceneIndexContainer from './scenes/scene_index_container';
 import SceneShowContainer from './scenes/scene_show_container';
+import LandingComponent from './landing/landing';
 
 
 const App = () => (
@@ -20,7 +21,7 @@ const App = () => (
     
 
      <Switch>
-         <Route exact path='/' component={LandingComponent} />
+        <Route exact path='/' component={LandingComponent} />
         <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />

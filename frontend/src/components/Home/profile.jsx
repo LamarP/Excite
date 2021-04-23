@@ -12,7 +12,7 @@ class Profile extends React.Component {
 
         return (
             <div>
-                <h1>Welcome</h1>
+                
             </div>
         );
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import song from '../../One Ok Rock Onion English Sub.mp3';
 import fake from '../../250-milliseconds-of-silence (1).mp3';
+import ReactAudioPlayer from 'react-audio-player';
 
 
 class LoginForm extends React.Component {
@@ -39,7 +40,7 @@ class LoginForm extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.currentUser === true) {
-            this.props.history.push('/');
+            this.props.history.push('/profile');
         }
 
         // Set or clear errors
@@ -131,11 +132,21 @@ class LoginForm extends React.Component {
 
                     {/* <iframe muted src={fake} type="audio/mp3" allow="autoplay" id="audio" style={{display:'none'}}></iframe> */}
                     
-                    <iframe src={fake} allow="autoplay" id="audio" style={{display: 'none'}}></iframe>
+                    {/* <iframe src={fake} allow="autoplay" id="audio" style={{display: 'none'}}></iframe> */}
 
-                    <audio autoPlay>
-                        <source src={song} type="audio/mp3"/>
-                    </audio>
+                    <ReactAudioPlayer 
+                        autoPlay 
+                        src={song} 
+                        type="audio/mp3"
+                        volume={0.1}
+                    />
+                    
+
+                    <div className="navbar-parent">
+                        <Link to={'/'} style={{ textDecoration: 'none' }}>
+                            <h1  className='header-title' >Excite</h1>
+                        </Link>
+                    </div>
                    
         </div>
          

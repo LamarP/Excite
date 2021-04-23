@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import song from '../../One Ok Rock Onion English Sub.mp3';
 
 
 class NavBar extends React.Component {
@@ -65,17 +66,30 @@ class NavBar extends React.Component {
             );
         } else {
             return (
-                <div className="navbar-parent">
-                    <Link to={'/'} style={{ textDecoration: 'none' }}>
-                        <h1  className='header-title' >Excite</h1>
-                    </Link>
+                // <div className="navbar-parent">
+                //     <Link to={'/'} style={{ textDecoration: 'none' }}>
+                //         <h1  className='header-title' >Excite</h1>
+                //     </Link>
 
+
+                // </div>
+                <div>
                     <video onClick={this.handleClick}
                         src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
                         autoPlay muted loop className='session-vid' type='video/mp4'>
                     </video>
 
+                    {/* <audio autoPlay>
+                        <source src={song} type="audio/mp3"/>
+                    </audio> */}
+                        {/* <ReactAudioPlayer 
+                        autoPlay 
+                        src={song} 
+                        type="audio/mp3"
+                        volume={0.1}
+                    /> */}
                 </div>
+
             );
         }
     }
