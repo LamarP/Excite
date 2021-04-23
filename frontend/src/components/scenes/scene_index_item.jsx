@@ -7,10 +7,10 @@ class SceneIndexItem extends React.Component {
   render() {
     console.log(this.props.scene)
     return(
-      <div>
+      <div className="scene-index-item">
         <Link to={`/scenes/${this.props.sceneId}`}>
           <figure>
-            <img src={this.props.scene.image} width='360' height='240' alt=""/>
+            <img src={this.props.scene.image} width='319' height='240' alt=""/>
           </figure>
         </Link>
         {/* <video width="320" height="240"  

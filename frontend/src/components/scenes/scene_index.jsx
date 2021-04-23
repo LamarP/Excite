@@ -12,7 +12,7 @@ class SceneIndex extends React.Component {
     console.log(this.props.scenes)
     if(!this.props.scenes) return null;
     return(
-      <div>
+      <div className='scene-index'>
         {
           this.props.scenes.map((ele,id) => {
             return <SceneIndexItem key={id} scene={ele} sceneId={id}/>

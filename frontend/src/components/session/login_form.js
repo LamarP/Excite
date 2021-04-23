@@ -131,9 +131,9 @@ class LoginForm extends React.Component {
 
                     {/* <iframe muted src={fake} type="audio/mp3" allow="autoplay" id="audio" style={{display:'none'}}></iframe> */}
                     
-                    <iframe src={song} allow="autoplay" id="audio" style={{display: 'none'}}></iframe>
+                    <iframe src={fake} allow="autoplay" id="audio" style={{display: 'none'}}></iframe>
 
-                    <audio autoplay>
+                    <audio autoPlay>
                         <source src={song} type="audio/mp3"/>
                     </audio>
                    

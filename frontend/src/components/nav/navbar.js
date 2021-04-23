@@ -45,11 +45,15 @@ class NavBar extends React.Component {
                             <li><Link className='link' to={'/'}>Profile</Link></li>
                             <li><Link className='link' to={'/explore'}>Explore</Link></li>
                             <li><Link className='link' to={'/scenes'}>Scenes</Link></li>
+                            <li><Link className='link' to={'/sounds'}>Sounds</Link></li>
                     </ul>
                        
                  </div>
                     
-                    
+                      <video
+                        src="https://player.vimeo.com/external/370845105.hd.mp4?s=1facf7310d1f043ea079556373d0618003593f2d&profile_id=173&oauth2_token_id=57447761"
+                        autoPlay muted loop className='session-vid' type='video/mp4'>
+                    </video>
                 </div>
                 
 
