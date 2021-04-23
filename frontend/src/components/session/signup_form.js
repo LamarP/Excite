@@ -122,6 +122,8 @@ class SignupForm extends React.Component {
                     type="audio/mp3"
                     volume={0.1}
                 />
+
+        
             </div>
         );
     }

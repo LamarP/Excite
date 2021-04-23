@@ -20,4 +20,42 @@ router.get('/humble', (req, res) => {
 router.get('/lookback', (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'lookback.mp3'))
 })
+
+router.get('/onion', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'onion.mp3'))
+})
+
+router.get('/riot', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'riot.mp3'))
+})
+
+router.get('/fire', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'fire.mp3'))
+})
+
+router.get('/animal', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'animal.mp3'))
+})
+
+router.get('/change', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'change.mp3'))
+})
+
+router.get('/crossing', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'crossing.mp3'))
+})
+
+router.get('/tiger', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'tiger.mp3'))
+})
+
+router.get('/roses', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'roses.mp3'))
+})
+
+router.get('/lean', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'lean.mp3'))
+})
+
+
 module.exports = router;

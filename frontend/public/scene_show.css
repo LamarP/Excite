@@ -46,7 +46,7 @@ body {
 
 .wrapper {
   width: 400px;
-  height: 420px;
+  height: 440px;
   color: #000;
   top: 50%;
   left: 50%;
@@ -71,7 +71,7 @@ body {
   /* margin-left: -50%; */
   font-size: 47px; 
   text-align: center;
-  margin-bottom: 28px;   
+  margin-bottom: 18px;   
   color: #ddd;
 }
 
@@ -81,7 +81,7 @@ body {
   background:  transparent;
   outline:  none;
   height:  30px;
-  font-size:  16px;
+  font-size:  20px;
   opacity: 1;
   color: rgb(255, 255, 255);
 }
@@ -317,7 +317,7 @@ body {
 
 
 
-/* styles for the session forms */
+/* styles for the sounds */
 
 
 /* gave the sounds a grid */
@@ -365,20 +365,69 @@ body {
    transform: scale(1.03);
 }
 
+
+/* url backgrounds for each nth child of sound-index-item ul */
 .sound-index-item:nth-child(1){
-  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/23/8d/d2/238dd2b9-4e93-3dc2-f7f0-113f6c854ea5/00602557608717.rgb.jpg/500x500bb-60.jpg')  100% no-repeat; 
+  background: url('https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/f9/b9/18/f9b91830-d98d-4506-e77c-8028a6a3be6e/00602557365771.rgb.jpg/500x500bb-60.jpg')  100% no-repeat; 
   background-size:cover; 
 }
 
 .sound-index-item:nth-child(2){
-  background: url('https://upload.wikimedia.org/wikipedia/en/5/58/Humble_kendrick_lamar.jpg')  100% no-repeat; 
+  background: url('https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/2e/eb/9a/2eeb9ac0-558c-7094-75b9-a4978ed82e9a/jacket_SECL01543B00Z_550.jpg/600x600bb-60.jpg')  100% no-repeat; 
   background-size:cover; 
 }
 
 .sound-index-item:nth-child(3){
+  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/76/12/79/76127992-688e-193c-077e-b13665b2cfc2/886447066218.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(4){
+  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/23/8d/d2/238dd2b9-4e93-3dc2-f7f0-113f6c854ea5/00602557608717.rgb.jpg/500x500bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(5){
+  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/76/d9/f8/76d9f818-9466-fe15-ad13-5c6db92c6ebb/mzi.qaklsiyz.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(6){
+  background: url('https://upload.wikimedia.org/wikipedia/en/5/58/Humble_kendrick_lamar.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(7){
+  background: url('https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/67/18/78/671878c5-54ae-d855-967c-d894b391177b/cover_remix_hires.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(8){
   background: url('https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/19/2d/c6/192dc60d-1b9b-df33-7954-b40b4cec2c6f/075679850270.jpg/500x500bb-60.jpg')  100% no-repeat; 
   background-size:cover; 
 }
+
+.sound-index-item:nth-child(9){
+  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/52/ac/c7/52acc7e0-4d2e-7ce9-9aad-5f7e51b1b357/asset.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(10){
+  background: url('https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/b7/37/bb/b737bb84-7f57-4c21-8624-1324ecc00a00/mzi.yojpvany.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(11){
+  background: url('https://is2-ssl.mzstatic.com/image/thumb/Music2/v4/ec/b7/87/ecb787b9-4322-21a6-98ff-3fd568d5f6f4/4988010053543.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(12){
+  background: url('https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/08/1a/07/081a078a-bb44-57f5-0d47-349d7f135497/614223201122.jpg/600x600bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+
 
 .flex-sounds {
   display: flex;

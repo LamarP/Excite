@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import song from '../../One Ok Rock Onion English Sub.mp3';
-import fake from '../../250-milliseconds-of-silence (1).mp3';
 import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -16,6 +15,7 @@ class LoginForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
 
         this.a = new Audio(song);
@@ -72,6 +72,50 @@ class LoginForm extends React.Component {
     //         <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type="audio/ogg" />
     //     </audio>);
     // }
+update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+}
+
+  renderDemo() {
+      return (
+        <button className="auth-button" type="submit" onClick={this.demoLogin}><span>Demo Login</span></button>
+      )
+  }
+
+  demoLogin(e) {
+    e.preventDefault()
+    const demo = { email: "HandsomeDevil@gmail.com", password: "123456" }
+    const speed = 100;
+
+    if (this.state.email !== demo.email) {
+      const inputEmail = setInterval(() => {
+        if (this.state.email !== demo.email) {
+          const temp = demo.email.slice(0, this.state.email.length + 1);
+          this.setState({ email: temp })
+        } else {
+          clearInterval(inputEmail);
+          animatePW();
+        }
+      }, speed)
+    }
+    const animatePW = () => {
+      if (this.state.password !== demo.password) {
+        const inputPassword = setInterval(() => {
+          if (this.state.password !== demo.password) {
+            const temp = demo.password.slice(0, this.state.password.length + 1);
+            this.setState({ password: temp });
+          } else {
+            clearInterval(inputPassword);
+            this.props.demoLogin(demo)
+          }
+        }, speed);
+      }
+    }
+  }
+
+    // 
 
     renderErrors() {
         return (
@@ -107,6 +151,7 @@ class LoginForm extends React.Component {
                             />
 
                             <button className='auth-button' ><span>Submit</span></button>
+                            {this.renderDemo()}
                             {this.renderErrors()}
 
                     </form>
@@ -119,20 +164,9 @@ class LoginForm extends React.Component {
                     
                 </div>
              <div className='overlay-area'></div>
-                 {/* <video onClick={this.handleClick}
-                        src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
-                    autoPlay muted loop className='session-vid' type='video/mp4'>
-                </video> */}
-              
-                
-                    {/* <audio type="audio/mpeg" autoPlay volume="0.1" id='my-audio' controls>
+           
 
-             <source src={song} type="audio/mp4" />
-         </audio>  */}
-
-                    {/* <iframe muted src={fake} type="audio/mp3" allow="autoplay" id="audio" style={{display:'none'}}></iframe> */}
                     
-                    {/* <iframe src={fake} allow="autoplay" id="audio" style={{display: 'none'}}></iframe> */}
 
                     <ReactAudioPlayer 
                         autoPlay 
@@ -147,6 +181,7 @@ class LoginForm extends React.Component {
                             <h1  className='header-title' >Excite</h1>
                         </Link>
                     </div>
+
                    
         </div>
          
