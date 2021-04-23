@@ -34,6 +34,7 @@ const App = () => (
 
      <Switch>
         <Route exact path='/' component={LandingComponent} />
+        <ProtectedRoute exact path="/explore" component={ProfileContainer} />
         <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
