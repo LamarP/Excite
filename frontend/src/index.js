@@ -33,7 +33,7 @@ import { setAuthToken } from './util/session_api_util';
 
 import { logout } from './actions/session_actions';
 
-import * as SoundUtil from './util/sound_util';
+import * as exciteUtil from './util/excite_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   window.getState = store.getState
+  window.fetchExcites = exciteUtil.fetchExcites;
   const root = document.getElementById('root');
 
   ReactDOM.render(<Root store={store} />, root);

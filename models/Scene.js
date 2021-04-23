@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const SceneSchema = new Schema({
   sceneId: {
-    type: String,
+    type: Number,
     required: true
     
   },
-  name: {
+  title: {
     type: String,
     required: true
   },

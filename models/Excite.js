@@ -5,17 +5,24 @@ const Schema = mongoose.Schema;
 
 const ExciteSchema = new Schema({
   exciteId: {
-    type: String,
+    type: Number,
     required: true
   },
   title: {
     type: String,
     required: true
   },
-
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'users'
+    ref: 'User'
+  },
+  sound: {
+    type: Schema.Types.ObjectId,
+    ref: 'Sound'
+  },
+  scene: {
+    type: Schema.Types.ObjectId,
+    ref: 'Scene'
   }
   
 })

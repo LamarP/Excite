@@ -7,5 +7,5 @@ export const allScenes = () => {
 
 
 export const scene = (sceneId) => {
-    return axios.get(`/api/scenes/${sceneId}`);
+    return axios.get(`/api/scenes/scene`,{params:{sceneId}});
 };

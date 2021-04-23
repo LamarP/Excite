@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fetch = require("node-fetch");
 const apiKey = require("../../config/keys");
-
+const Scene = require("../../models/Scene");
 const collectionId = require("../../config/keys").collectionId;
 
 const _getVideo = async (videoId) => {
@@ -24,9 +24,14 @@ const _getCollections = async () => {
   return data.media;
 }
 
-router.get("/scene", async (req, res) => {
-  const video = await _getVideo(req.query.videoId);
-  return res.json(video);
+router.get("/scene", (req, res) => {
+  const sceneId = req.params.sceneId;
+  Scene.findById(sceneId)
+    .then(async (scene) => {
+      const video = await _getVideo(scene.sceneId)
+      return res.json(video);
+  })
+
 })
 
 router.get("/", async (req, res) => {

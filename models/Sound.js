@@ -7,13 +7,18 @@ const SoundSchema = new Schema({
     type: String,
     required: true
   },
-  description: {
-    type: String,
-    required: true
-  },
   soundUrl: {
     type: String, 
     required: true
+  },
+  soundId: {
+    type: Number,
+    required: true
+  },
+
+  excite: {
+    type: Schema.Types.ObjectId,
+    ref: 'Excite'
   }
 }, {
   timestamps: true 

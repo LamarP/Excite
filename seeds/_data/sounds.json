@@ -1,3 +1,26 @@
 [
-
+  {
+    "title": "DNA",
+    "soundUrl": "/api/sounds/dna.mp3",
+    "soundId": 1,
+    "excites": "6081baee99040416761d47dc"
+  },
+  {
+    "title": "Eye of the tiger",
+    "soundUrl": "/api/sounds/eyeofthetiger.mp3",
+    "soundId": 2,
+    "excites": "6081baee99040416761d47dd"
+  },
+  {
+    "title": "Humble",
+    "soundUrl": "/api/sounds/humble.mp3",
+    "soundId": 3,
+    "excites": "6081baee99040416761d47de"
+  },
+  {
+    "title": "Lookback",
+    "soundUrl": "/api/sounds/lookback.mp3",
+    "soundId": 4,
+    "excites": "6081baee99040416761d47df"
+  }
 ]
