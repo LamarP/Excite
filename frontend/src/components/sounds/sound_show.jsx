@@ -19,7 +19,7 @@ class SoundShow extends React.Component {
       this.props.fetchSound(this.props.sound.slice(0, -4))
       this.setState({title: this.props.sound.slice(0, -4)})
     }
-    console.log(this.props)
+  
   }
 
   render() {
@@ -41,7 +41,6 @@ class SoundShow extends React.Component {
                     autoPlay muted loop className='vid' type='video/mp4'>
         </video>
 
-        <h3>hello</h3>
       </div>
     )
   }
