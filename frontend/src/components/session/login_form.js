@@ -80,7 +80,7 @@ update(field) {
 
   renderDemo() {
       return (
-        <button className="auth-button" type="submit" onClick={this.demoLogin}>Demo Login</button>
+        <button className="auth-button" type="submit" onClick={this.demoLogin}><span>Demo Login</span></button>
       )
   }
 
