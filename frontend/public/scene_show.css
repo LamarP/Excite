@@ -399,3 +399,17 @@ body {
    transform: translate(-50%, -50%);
    text-shadow: 2px 2px 4px black;
 }
+
+.error-page {
+  text-align: center; 
+  font-size: 200px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+  position: fixed; /* or absolute */
+  top: 30%;
+  left: 35%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
+   transform: translate(-50%, -50%);
+   text-shadow: 2px 2px 4px black;
+}

@@ -12,6 +12,18 @@ import SceneIndexContainer from './scenes/scene_index_container';
 import SceneShowContainer from './scenes/scene_show_container';
 import LandingComponent from './landing/landing';
 
+const NoMatchPage = () => {
+  return (
+      <div>
+        <p className="error-page">404 - Not found</p>
+        <video 
+            src="https://player.vimeo.com/external/480942871.hd.mp4?s=9a445e0c6fb355ca41f796eff01ad63d03c2e5aa&profile_id=175&oauth2_token_id=57447761"
+            autoPlay muted loop className='session-vid' type='video/mp4'>
+        </video>
+      </div>
+
+  );
+};
 
 const App = () => (
     <div>
@@ -29,6 +41,7 @@ const App = () => (
         <ProtectedRoute exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
         <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
         <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
+        <Route component={NoMatchPage} />
      </Switch>
     </div>
 
