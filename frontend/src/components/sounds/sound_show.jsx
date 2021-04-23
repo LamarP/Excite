@@ -37,7 +37,7 @@ class SoundShow extends React.Component {
         />
         
         <video onClick={() => this.props.history.push('/sounds')}
-          src="https://player.vimeo.com/external/370845105.hd.mp4?s=1facf7310d1f043ea079556373d0618003593f2d&profile_id=173&oauth2_token_id=57447761"
+          src="https://player.vimeo.com/external/370467553.hd.mp4?s=ce49c8c6d8e28a89298ffb4c53a2e842bdb11546&profile_id=172&oauth2_token_id=57447761"
                     autoPlay muted loop className='vid' type='video/mp4'>
         </video>
 

@@ -20,4 +20,19 @@ router.get('/humble', (req, res) => {
 router.get('/lookback', (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'lookback.mp3'))
 })
+
+router.get('/onion', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'onion.mp3'))
+})
+
+router.get('/riot', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'riot.mp3'))
+})
+
+router.get('/fire', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/public/songs', 'fire.mp3'))
+})
+
+
+
 module.exports = router;
