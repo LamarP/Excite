@@ -9,6 +9,15 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/excite', (req, res) => {
+  
+  const exciteId = req.query.id;
+  //change to params
+    Excite.findById(exciteId)
+      .then((excite) => {
+        return res.json(excite);
+    })
+})
 
 // post, get, delete, update 
 // get - request with exciteId, response of an excite instance

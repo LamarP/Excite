@@ -21,9 +21,8 @@ export const receiveScene = (payload) => ({
 // Thunk actions
 
 export const fetchScenes = () => dispatch => (
-  APIUtil.allScenes().then(res => (
-    dispatch(receiveAllScenes(res))
-  ))
+  APIUtil.allScenes()
+    .then(res => (dispatch(receiveAllScenes(res))))
 );
 
 export const fetchScene = (sceneId) => dispatch => (
