@@ -11,6 +11,6 @@ const ScenesReducer = (state = {}, action) => {
     default:
       return state;
   }
-};
+}
 
 export default ScenesReducer;
