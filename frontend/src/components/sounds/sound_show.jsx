@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import { Link, withRouter } from 'react-router-dom';
 
 class SoundShow extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class SoundShow extends React.Component {
       this.props.fetchSound(this.props.sound.slice(0, -4))
       this.setState({title: this.props.sound.slice(0, -4)})
     }
+    console.log(this.props)
   }
 
   render() {
@@ -29,13 +31,20 @@ class SoundShow extends React.Component {
         <ReactAudioPlayer
           src={this.props.sounds.config.url}
           id="audio-player"
-          controls
+          
           autoPlay
           onPlay={document.addEventListener('click', this.handleClick)}
         />
+        
+        <video onClick={() => this.props.history.push('/sounds')}
+          src="https://player.vimeo.com/external/370845105.hd.mp4?s=1facf7310d1f043ea079556373d0618003593f2d&profile_id=173&oauth2_token_id=57447761"
+                    autoPlay muted loop className='vid' type='video/mp4'>
+        </video>
+
+        <h3>hello</h3>
       </div>
     )
   }
 }
 
-export default SoundShow;
+export default withRouter(SoundShow);

@@ -23,8 +23,8 @@ const App = () => (
         <ProtectedRoute exact path="/" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path='/sounds' component={SoundsIndexContainer} />
-        <Route exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
+        <ProtectedRoute exact path='/sounds' component={SoundsIndexContainer} />
+        <ProtectedRoute exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
         <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
         <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
      </Switch>

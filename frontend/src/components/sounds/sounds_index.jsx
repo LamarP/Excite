@@ -20,8 +20,8 @@ export default class SoundsIndex extends React.Component {
         <SoundsIndexItem key={idx} soundId={idx} fetchSound={this.props.fetchSound} sound={sound}/>  
       ))
         return (
-           <div>
-                <ul>
+           <div className='flex-sounds'>
+                <ul className='sound-index'>
                     {soundItems}
                </ul>
            </div>
