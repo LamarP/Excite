@@ -29,3 +29,9 @@ export const fetchSounds = () => dispatch => (
         .then((sounds) => dispatch(receiveSounds(sounds)))
         .catch(err => dispatch(receiveSoundErrors(err)))
 );
+
+export const getSound = soundId => dispatch => (
+    SoundUtil.getSound(soundId)
+        .then((sound => dispatch(receiveSound(sound))))
+        .catch(err => dispatch(receiveSoundErrors(err)))
+);

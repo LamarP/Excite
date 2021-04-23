@@ -25,7 +25,7 @@ const _getCollections = async () => {
 }
 
 router.get("/scene", (req, res) => {
-  const sceneId = req.params.sceneId;
+  const sceneId = req.query.sceneId || req.params.sceneId;
   Scene.findById(sceneId)
     .then(async (scene) => {
       const video = await _getVideo(scene.sceneId)

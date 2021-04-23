@@ -11,9 +11,9 @@ export const receiveAllScenes = (payload) => ({
   scenes: payload
 });
 
-export const receiveScene = (payload) => ({
+export const receiveScene = scene => ({
   type: RECEIVE_SCENE,
-  scene: payload
+  scene
 });
 
 

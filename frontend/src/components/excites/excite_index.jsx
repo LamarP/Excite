@@ -4,20 +4,20 @@ export default class ExciteIndex extends React.Component {
   
   componentDidMount() {
     this.props.fetchExcites();
-    
+    this.props.fetchScenes();
   }
 
+
   render() {
-    console.log(this.props);
-    if (!this.props.exciteArr) { return null }
-    
-    const thumbnails = this.props.exciteArr.map((excite, idx) => {
-      return <ExciteIndexItem key={idx} excite={excite} fetchScene={this.props.fetchScene}/>
-    })
+    if (!Array.isArray(this.props.scenes.data)) { return null }
+
+    const scenesArr = this.props.scenes.data.map((scene, idx) => {
+      return <ExciteIndexItem key={idx} scene={scene} excite={this.props.exciteArr[idx]}/>
+    });
     return (
-      <div>words
+      <div>
         <ul>
-          {thumbnails}
+          {scenesArr}
         </ul>
       </div>
     )

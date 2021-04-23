@@ -7,3 +7,7 @@ export const fetchSound = (soundTitle) => {
 export const fetchSounds = () => {
     return axios.get('/api/sounds')
 };
+
+export const getSound = (soundId) => {
+    return axios.get(`/api/sounds/${soundId}`)
+};

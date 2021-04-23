@@ -11,7 +11,7 @@ import SoundsShowContainer from './sounds/sound_show_container';
 import SceneIndexContainer from './scenes/scene_index_container';
 import SceneShowContainer from './scenes/scene_show_container';
 import ExciteIndexContainer from './excites/excite_index_container';
-
+import ExciteShowContainer from './excites/excite_show_container';
 const App = () => (
     <div>
       <header>
@@ -26,8 +26,9 @@ const App = () => (
         <Route exact path='/sounds' component={SoundsIndexContainer} />
         <Route exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
         <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
-      <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
-      <ProtectedRoute exact path='/excites' component={ExciteIndexContainer} />
+        <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
+        <ProtectedRoute exact path='/excites' component={ExciteIndexContainer} />
+        <ProtectedRoute exact path='/excites/excite/:id' component={ExciteShowContainer} />
      </Switch>
     </div>
 
