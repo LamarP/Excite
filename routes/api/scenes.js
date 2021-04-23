@@ -4,6 +4,7 @@ const fetch = require("node-fetch");
 const apiKey = require("../../config/keys");
 
 const collectionId = require("../../config/keys").collectionId;
+
 const _getVideo = async (videoId) => {
   const result = await fetch(`https://api.pexels.com/videos/videos/${videoId}`,
     {

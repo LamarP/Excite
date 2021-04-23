@@ -34,6 +34,8 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
 
+import * as SoundUtil from './util/sound_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore({});
   }
   
+  window.getState = store.getState
   const root = document.getElementById('root');
 
   
