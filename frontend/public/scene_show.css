@@ -384,3 +384,11 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.landing-title {
+  display: inline-block;
+  text-align: center;
+  font-size: 300px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+}

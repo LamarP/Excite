@@ -39,13 +39,13 @@ class NavBar extends React.Component {
                 </div> */}
               
                 <div className='header'>
-                        <Link className='link' to={'/'} style={{ textDecoration: 'none' }}>
+                        <Link className='link' to={'/profile'} style={{ textDecoration: 'none' }}>
                                 <h1 className='logo'>Excite</h1>
                         </Link>
 
                         <button className="logout" onClick={this.logoutUser}>Logout</button>
                     <ul className='nav-area'>
-                            <li><Link className='link' to={'/'}>Profile</Link></li>
+                            <li><Link className='link' to={'/profile'}>Profile</Link></li>
                             <li><Link className='link' to={'/explore'}>Explore</Link></li>
                             <li><Link className='link' to={'/scenes'}>Scenes</Link></li>
                             <li><Link className='link' to={'/sounds'}>Sounds</Link></li>
