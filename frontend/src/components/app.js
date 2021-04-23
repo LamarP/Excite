@@ -10,7 +10,20 @@ import SoundsIndexContainer from './sounds/sounds_index_container';
 import SoundsShowContainer from './sounds/sound_show_container';
 import SceneIndexContainer from './scenes/scene_index_container';
 import SceneShowContainer from './scenes/scene_show_container';
+import LandingComponent from './landing/landing';
 
+const NoMatchPage = () => {
+  return (
+      <div>
+        <p className="error-page">404 - Not found</p>
+        <video 
+            src="https://player.vimeo.com/external/480942871.hd.mp4?s=9a445e0c6fb355ca41f796eff01ad63d03c2e5aa&profile_id=175&oauth2_token_id=57447761"
+            autoPlay muted loop className='session-vid' type='video/mp4'>
+        </video>
+      </div>
+
+  );
+};
 
 const App = () => (
     <div>
@@ -20,13 +33,16 @@ const App = () => (
     
 
      <Switch>
-        <ProtectedRoute exact path="/" component={ProfileContainer} />
+        <Route exact path='/' component={LandingComponent} />
+        <ProtectedRoute exact path="/explore" component={ProfileContainer} />
+        <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path='/sounds' component={SoundsIndexContainer} />
-        <Route exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
+        <ProtectedRoute exact path='/sounds' component={SoundsIndexContainer} />
+        <ProtectedRoute exact path='/sounds/sound/:soundId' component={SoundsShowContainer}/>
         <ProtectedRoute exact path='/scenes' component={SceneIndexContainer} />
         <ProtectedRoute exact path='/scenes/:id' component={SceneShowContainer} />
+        <Route component={NoMatchPage} />
      </Switch>
     </div>
 

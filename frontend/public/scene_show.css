@@ -314,3 +314,102 @@ body {
 .scene-index-item img:hover {
    transform: scale(1.03);
 }
+
+
+
+/* styles for the session forms */
+
+
+/* gave the sounds a grid */
+.sound-index {
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  text-decoration: none; */
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-top: 120px;
+}
+
+
+.sound-index-item {
+  /* color: black; */
+  cursor: pointer;
+  /* margin: 18px; */
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 0 32%;
+  border-style: rgb(87, 86, 86) solid;
+  border-radius: 12px;
+  align-items: center;
+  border-width: 0.5px;
+  /* background-color: #eee; */
+  opacity: 1;
+  text-align: center;
+  background-color: green;
+
+  height: 200px;
+  width: 200px;
+
+}
+
+
+.sound-index-item:hover {
+   transform: scale(1.03);
+}
+
+.sound-index-item:nth-child(1){
+  background: url('https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/23/8d/d2/238dd2b9-4e93-3dc2-f7f0-113f6c854ea5/00602557608717.rgb.jpg/500x500bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(2){
+  background: url('https://upload.wikimedia.org/wikipedia/en/5/58/Humble_kendrick_lamar.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.sound-index-item:nth-child(3){
+  background: url('https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/19/2d/c6/192dc60d-1b9b-df33-7954-b40b4cec2c6f/075679850270.jpg/500x500bb-60.jpg')  100% no-repeat; 
+  background-size:cover; 
+}
+
+.flex-sounds {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-title {
+  /* display: inline-block;
+  text-align: center; */
+  font-size: 300px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+  position: fixed; /* or absolute */
+  top: 45%;
+  left: 50%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
+   transform: translate(-50%, -50%);
+   text-shadow: 2px 2px 4px black;
+}
+
+.error-page {
+  text-align: center; 
+  font-size: 200px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+  position: fixed; /* or absolute */
+  top: 30%;
+  left: 35%;
+  /* margin-top: -50px;
+  margin-left: -100px; */
+   transform: translate(-50%, -50%);
+   text-shadow: 2px 2px 4px black;
+}
