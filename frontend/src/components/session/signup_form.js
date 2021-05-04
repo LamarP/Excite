@@ -1,7 +1,8 @@
 import React from 'react';
-import { Redirect, withRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import song from '../../One Ok Rock Onion English Sub.mp3';
 import ReactAudioPlayer from 'react-audio-player';
+import Mute from '../mute_button/mute';
 
 
 
@@ -121,8 +122,12 @@ class SignupForm extends React.Component {
                     src={song} 
                     type="audio/mp3"
                     volume={0.1}
+                    id='myAudio'
+                    muted={true}
+                    loop={true}
                 />
 
+                <Mute/>
         
             </div>
         );

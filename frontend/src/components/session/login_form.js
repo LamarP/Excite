@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import song from '../../One Ok Rock Onion English Sub.mp3';
 import ReactAudioPlayer from 'react-audio-player';
+import Mute from '../mute_button/mute';
 
 
 class LoginForm extends React.Component {
@@ -28,9 +29,11 @@ class LoginForm extends React.Component {
     //    this.a.play();
     // }
 
-    // componentDidMount() {
-    //     return this.audio()
-    // }
+    componentDidMount() {
+        // document.addEventListener('DOMContentLoaded')
+        // let a = document.querySelector('#myAudio');
+        // console.log(a)
+    }
 
     // audio() {
     //     <audio type="audio/mpeg" autoPlay >
@@ -173,9 +176,16 @@ update(field) {
                         src={song} 
                         type="audio/mp3"
                         volume={0.1}
+                        id='myAudio'
+                        muted={true}
+                        loop={true}
                     />
                     
+                    {/* <div className='pink-circle'> */}
+                    <Mute />
 
+                    {/* </div> */}
+                    
                     <div className="navbar-parent">
                         <Link to={'/'} style={{ textDecoration: 'none' }}>
                             <h1  className='header-title' >Excite</h1>
