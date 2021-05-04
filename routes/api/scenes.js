@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 const fetch = require("node-fetch");
 const apiKey = require("../../config/keys");
-
+const ScenesController = require('../../controllers/scenes');
 const collectionId = require("../../config/keys").collectionId;
 
-const _getVideo = async (videoId) => {
-  const result = await fetch(`https://api.pexels.com/videos/videos/${videoId}`,
-    {
-      method: "GET",
-      headers: { 'Authorization': apiKey.apiKey }
-    })
-  const data = await result.json();
-  return data;
-}
+// const _getVideo = async (videoId) => {
+//   const result = await fetch(`https://api.pexels.com/videos/videos/${videoId}`,
+//     {
+//       method: "GET",
+//       headers: { 'Authorization': apiKey.apiKey }
+//     })
+//   const data = await result.json();
+//   return data;
+// }
 
 const _getCollections = async () => {
   const result = await fetch(`https://api.pexels.com/v1/collections/${collectionId}`, {
@@ -25,8 +25,8 @@ const _getCollections = async () => {
 }
 
 router.get("/scene", async (req, res) => {
-  const video = await _getVideo(req.query.videoId);
-  return res.json(video);
+  const scene = await ScenesController.getScene(req.query.sceneId)
+  return res.json(scene);
 })
 
 router.get("/", async (req, res) => {

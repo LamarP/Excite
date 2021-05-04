@@ -34,8 +34,8 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
 
-import * as SoundUtil from './util/sound_util';
-
+import {fetchScene} from './actions/scene_actions';
+import {fetchExcite} from './util/excite_util'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore({});
   }
   
-  window.getState = store.getState
+  window.getState = store.getState;
+  window.fetchScene = fetchScene;
+  window.fetchExcite = fetchExcite;
+  window.dispatch = store.dispatch;
   const root = document.getElementById('root');
 
   
