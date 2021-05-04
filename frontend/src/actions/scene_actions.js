@@ -11,9 +11,9 @@ export const receiveAllScenes = (payload) => ({
   scenes: payload
 });
 
-export const receiveScene = (payload) => ({
+export const receiveScene = scene => ({
   type: RECEIVE_SCENE,
-  scene: payload
+  scene
 });
 
 
@@ -27,7 +27,7 @@ export const fetchScenes = () => dispatch => (
 );
 
 export const fetchScene = (sceneId) => dispatch => (
-  APIUtil.scene(sceneId).then(res => (
+  APIUtil.fetchScene(sceneId).then(res => (
     dispatch(receiveScene(res))
   ))
 );

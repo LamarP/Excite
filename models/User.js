@@ -14,7 +14,10 @@ const UserSchema = new Schema({
   password2: {
     type: String, 
     required: true
-  }
+  }, 
+  excites: [
+    {type: Schema.Types.ObjectId, ref: "Excite"}
+  ]
 }, {
   timestamps: true 
 })

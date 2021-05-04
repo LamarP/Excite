@@ -1,3 +1,48 @@
 [
-
+    {
+        "title": "Change", 
+        "soundUrl": "/api/sounds/change", 
+        "excites": ["6085e10914b0a059cef012a7"]
+    },
+    {
+        "title": "Crossing", 
+        "soundUrl": "/api/sounds/crossing", 
+        "excites": ["6085e10914b0a059cef012a8"]
+    },
+    {
+        "title": "DNA", 
+        "soundUrl": "/api/sounds/dna", 
+        "excites": ["6085e10914b0a059cef012a9"]
+    },
+    {
+        "title": "Fire", 
+        "soundUrl": "/api/sounds/fire", 
+        "excites": ["6085e10914b0a059cef012aa"]
+    },
+    {
+        "title": "Humble", 
+        "soundUrl": "/api/sounds/humble", 
+        "excites": ["6085e10914b0a059cef012ab"]
+    },
+    {
+        "title": "Lean", 
+        "soundUrl": "/api/sounds/lean", 
+        "excites": ["6085e10914b0a059cef012ac"]
+    },
+    {
+        "title": "Look Back", 
+        "soundUrl": "/api/sounds/lookback", 
+        "excites": ["6085e10914b0a059cef012ad"]
+    },
+    {
+        "title": "Riot", 
+        "soundUrl": "/api/sounds/riot", 
+        "excites": ["6085e10914b0a059cef012ae"]
+    },
+    {
+        "title": "Roses", 
+        "soundUrl": "/api/sounds/roses", 
+        "excites": ["6085e10914b0a059cef012af"]
+    }
 ]
+
