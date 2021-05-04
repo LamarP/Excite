@@ -14,9 +14,9 @@ class SceneIndex extends React.Component {
     return(
       <div className='scene-index'>
         {
-          this.props.scenes.map((ele,id) => {
-            return <SceneIndexItem key={id} scene={ele} sceneId={id}/>
-          })
+          this.props.scenes.map((ele,id) => (
+             <SceneIndexItem key={id} scene={ele} sceneId={id}/>
+          ))
         }
       </div>
     )

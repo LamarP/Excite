@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+
+    <style>
+
+      body {
+
+        margin: 0;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+
+    <script> 
+
+      const scene = new THREE.Scene();
+
+      scene.background = new THREE.Color(0xFFA500)
+
+      const renderer = new THREE.WebGLRenderer();
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      document.body.appendChild(renderer.domElement);
+
+      const camera = new THREE.PerspectiveCamera(100,
+                                 window.innerWidth / window.innerHeight,
+                                                 0.1,
+                                                 2000);
+
+      const characterGeometry = new THREE.SphereBufferGeometry(2, 32, 32);
+
+      var characterMaterial = new THREE.MeshBasicMaterial({
+
+        color: 0xFFFFFF
+
+      });
+
+      var characterMesh = new THREE.Mesh(characterGeometry, characterMaterial);
+      
+      characterMesh.add(camera);
+
+      scene.add(characterMesh);
+
+      camera.position.z = 5; 
+
+      const floorGeometry = new THREE.PlaneGeometry(1000, 1000, 10, 10);
+
+      const floorMaterial = new THREE.MeshBasicMaterial({
+
+        color: 0x228B22,
+        side: THREE.DoubleSide
+
+      });
+
+      const floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
+
+      floorMesh.rotation.x = Math.PI / 2;
+
+      floorMesh.position.y = -5
+
+      scene.add(floorMesh);
+
+      const animate = function () {
+
+        requestAnimationFrame(animate);
+
+        renderer.render(scene, camera);
+
+        update();
+
+      }
+
+      var keyboardEvent;
+
+      var pressed = false;
+
+      function update() {
+
+        if (pressed) {
+          
+          const moveDistance = 1
+
+          if (keyboardEvent.keyCode === 37) {
+
+            characterMesh.position.x -= moveDistance
+
+          } else if (keyboardEvent.keyCode === 39) {
+
+            characterMesh.position.x += moveDistance
+
+          } else if (keyboardEvent.keyCode === 38) {
+
+            characterMesh.position.z -= moveDistance
+
+          } else if (keyboardEvent.keyCode === 40) {
+
+            characterMesh.position.z += moveDistance
+
+          } else if (keyboardEvent.keyCode === 32) {
+
+            characterMesh.position.y += moveDistance
+
+          }
+        }
+
+      }
+
+
+      window.addEventListener("keydown", onKeyDown, false);
+
+      window.addEventListener("keyup", onKeyUp, false);
+
+      function onKeyDown(event) {
+
+        keyboardEvent = event;
+
+        pressed = true;
+
+      }
+
+      function onKeyUp(event) {
+
+        pressed = false; 
+
+        keyboardEvent = event;
+
+      }
+
+      animate();
+
+    </script>
+
+  </body>
+
+</html>

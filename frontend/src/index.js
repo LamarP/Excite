@@ -33,15 +33,17 @@ import { setAuthToken } from './util/session_api_util';
 
 import { logout } from './actions/session_actions';
 
+import { fetchExcites } from './actions/excite_actions';
 
-import * as SoundUtil from './util/sound_util';
+
+// import * as SoundUtil from './util/sound_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   
  // window.store = configureStore();
-  
+   
   if (localStorage.jwtToken) {
     setAuthToken(localStorage.jwtToken);
 
@@ -63,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     store = configureStore({});
   }
-  
+  window.dispatch = store.dispatch
+  window.fetchExcites = fetchExcites
   window.getState = store.getState
   const root = document.getElementById('root');
 
