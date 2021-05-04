@@ -10,8 +10,8 @@ import {fetchSound} from '../../actions/sound_actions'
 
 const mSTP = (state, ownProps) => ({
     scene: state.scenes.data[ownProps.match.params.id], 
-    sound: state.sounds[ownProps.match.params.id], 
-    sounds: state.sounds
+    sounds: state.sounds,
+    sound: state.sounds[ownProps.match.params.id] 
 });
 
 const mDTP = dispatch => ({
