@@ -8,12 +8,9 @@ class SoundShow extends React.Component {
     this.state = { 
       title: ''
     }
-    this.handleClick = this.handleClick.bind(this);
+
   }
 
-  handleClick() {
-   console.log('clicked')
-  }
   componentDidMount() {
     if(this.props.sound) {
       this.props.fetchSound(this.props.sound.slice(0, -4))
@@ -33,7 +30,6 @@ class SoundShow extends React.Component {
           id="audio-player"
           
           autoPlay
-          onPlay={document.addEventListener('click', this.handleClick)}
         />
         
         <video onClick={() => this.props.history.push('/sounds')}

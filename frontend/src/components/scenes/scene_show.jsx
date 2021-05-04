@@ -18,7 +18,7 @@ class SceneShow extends React.Component {
 
   render() {
     // debugger
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <video onClick={this.handleClick} 
       src={this.props.scenes.video_files.filter(vid => ( vid.quality === "hd"))[0].link} 
