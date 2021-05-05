@@ -16,4 +16,8 @@ router.get('/excite', async(req, res) => {
     res.send(excite)
 })
 
+router.post('/excite', async(req, res) => {
+    const excite = await ExcitesController.createExcite(req.query.payload); 
+    res.send(excite)
+})
 module.exports = router;

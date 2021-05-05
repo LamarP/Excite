@@ -8,6 +8,11 @@ const ExcitesController = {
     getExcite: async(id) => {
         const result = await Excite.findById(id);
         return result;
+    }, 
+    createExcite: async payload => {
+        const excite = new Excite(payload)
+        const result = await excite.save()
+        return result;
     }
 }
 
