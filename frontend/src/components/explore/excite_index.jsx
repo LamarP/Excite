@@ -12,11 +12,11 @@ export default class ExciteIndex extends React.Component {
             return <ExciteIndexItem key={idx} idx={idx} scene={scene} fetchExcite={this.props.fetchExcite} fetchScene={this.props.fetchScene}/>
         })
         return(
-            <div>
-                <ul>
+            // <div  >
+                <ul className='scene-index' >
                     {exciteIndex}
                 </ul>
-            </div>
+            // </div>
         )
     }
 }
