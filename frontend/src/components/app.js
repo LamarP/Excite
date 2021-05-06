@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavBarContainer from './nav/navbar_container';
-import ProfileContainer from './Home/profile_container';
+import ProfileContainer from './profile/profile_container';
 import SoundsIndexContainer from './sounds/sounds_index_container';
 import SoundsShowContainer from './sounds/sound_show_container';
 import SceneIndexContainer from './scenes/scene_index_container';
