@@ -287,6 +287,7 @@ body {
   margin-right: 12%;
   margin-left: 12%;
   margin-top: 120px;
+  padding-bottom: 100px;
 }
 
 .scene-index-item {
@@ -305,13 +306,14 @@ body {
   /* background-color: #eee; */
   opacity: 1;
   text-align: center;
+  position: relative;
 }
 
 .scene-index-item img {
   border-radius: 16px;
 }
 
-.scene-index-item img:hover {
+.scene-index-item:hover {
    transform: scale(1.03);
 }
 
@@ -513,4 +515,20 @@ label.mute {
   background-color: rgb(246, 100, 139);
   display: flex;
   justify-content: center;
+}
+
+.excite-index-item-title {
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 319px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 0px 0px 16px 16px;
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  color: #f6648b;
+  /* height: 30px; */
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

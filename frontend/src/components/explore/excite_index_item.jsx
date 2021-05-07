@@ -8,10 +8,13 @@ export default class ExciteIndexItem extends React.Component {
     }
     render() {
         if(!this.props.scene) return null;
+        if(!this.props.excite) return null;
+        // console.log(this.state.excite)
         return(
-            <li> 
+            <li className="scene-index-item" > 
                 <Link to={`/explore/${this.props.idx}`}>
                     <img src={this.props.scene.image} width='319' height='240' alt=""/>
+                    <div className='excite-index-item-title' >{this.props.excite.title}</div>
                 </Link>
             </li>
         )
