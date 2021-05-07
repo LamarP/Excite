@@ -22,6 +22,7 @@ const GoalsController = {
   deleteGoal: async(goalId) => {
       const goal = await Goal.deleteOne({_id: goalId});
       return goal;
+      
   }
 }
 
