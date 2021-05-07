@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-// import {withRouter} from 'react-router-dom';
+
 class ExciteShow extends React.Component {
 
     constructor(props) {
@@ -13,15 +13,12 @@ class ExciteShow extends React.Component {
     }
 
     handleClick() {
-        //this.props.history.goBack();
-        // console.log('hello')
         this.props.history.push('/explore');
-        // console.log('bye')
     }
 
     render() {
-        // console.log(this.props)
        if(!this.props.sounds.config) return null;
+       console.log(this.props)
        return(
            <div >
                <video onClick={this.handleClick} src={this.props.scene.video_files.filter(vid => ( vid.quality === "hd"))[0].link} autoPlay muted loop className='vid' type='video/mp4'></video>
