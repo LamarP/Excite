@@ -8,8 +8,8 @@ export default class ExciteIndexItem extends React.Component {
         //     excite: undefined,
         // }
     }
-    async componentDidMount() {
-       this.props.fetchExcite(this.props.scene.id)
+    componentDidMount() {
+       this.props.fetchExcite(this.props.excite.scene)
     //    this.setState({excite: result.excite}) 
             // .then(res => {
             //     this.setState({excite: res.excite})
@@ -18,12 +18,13 @@ export default class ExciteIndexItem extends React.Component {
     }
     render() {
         if(!this.props.scene) return null;
-        // console.log(this.state.excite)
+        if(!this.props.excite) return null;
+        // console.log(this.props)
         return(
             <li className="scene-index-item" > 
                 <Link to={`/explore/${this.props.idx}`}>
                     <img src={this.props.scene.image} width='319' height='240' alt=""/>
-                    <div className='excite-index-item-title' >Title</div>
+                    <div className='excite-index-item-title' >{this.props.excite.title}</div>
                 </Link>
             </li>
         )
