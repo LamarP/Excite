@@ -1,11 +1,24 @@
 import axios from 'axios';
 
 
-export const allScenes = () => {
-    return axios.get('/api/scenes/');
+export const allGoals = () => {
+    return axios.get('/api/goals/');
 };
 
 
-export const fetchScene = (sceneId) => {
-    return axios.get(`/api/scenes/scene`, { params: { sceneId: sceneId } });
+export const fetchGoal = (goalId) => {
+    return axios.get(`/api/goals/goal`, { params: { goalId: goalId } });
+};
+
+export const postGoal = (goal) => {
+    return axios.post(`/api/goals/goal`, goal);
+};
+
+export const patchGoal = (goalId, goal) => {
+    // return axios.patch(`/api/goals/goal/?goalId=${goal._id}`, goal);
+    return axios.patch('./api/goals/goal', { params: { goalId: goalId }, goal })
+};
+
+export const deleteGoal = (goalId) => {
+    return axios.delete('/api/goals/goal/'), {params: {goalId: goalId}};
 };
