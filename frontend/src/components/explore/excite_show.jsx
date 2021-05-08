@@ -9,7 +9,8 @@ class ExciteShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchSound(this.props.sound.slice(0, -4))
+        this.props.fetchSound(this.props.excite.sounds[0].slice(0, -4))
+
     }
 
     handleClick() {
@@ -20,14 +21,14 @@ class ExciteShow extends React.Component {
        if(!this.props.sounds.config) return null;
        console.log(this.props)
        return(
-           <div >
-               <video onClick={this.handleClick} src={this.props.scene.video_files.filter(vid => ( vid.quality === "hd"))[0].link} autoPlay muted loop className='vid' type='video/mp4'></video>
-                <ReactAudioPlayer
-          src={this.props.sounds.config.url}
-          id="audio-player"
-          volume={0.1}
-          autoPlay
-        />
+           <div>
+               <video onClick={this.handleClick} src={this.props.excite.sceneUrl} autoPlay muted loop className='vid' type='video/mp4'></video>
+               <ReactAudioPlayer
+                    src={this.props.sounds.config.url}
+                    id="audio-player"
+                    volume={0.1}
+                    autoPlay
+                />
            </div>
        )
     }

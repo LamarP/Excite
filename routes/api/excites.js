@@ -11,8 +11,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/excite', async(req, res) => {
-    const scene = ScenesController.getScene(req.query.sceneId)
-    const excite = await ExcitesController.getExcite(scene.excite)
+    const excite = await ExcitesController.getExcite(req.query.exciteId)
     res.send(excite)
 })
 
