@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-
 const ExciteSchema = new Schema({
   title: {
     type: String,
