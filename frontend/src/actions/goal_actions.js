@@ -17,9 +17,9 @@ export const receiveGoal = goal => ({
   goal
 });
 
-export const removeGoal = goalId => ({
+export const removeGoal = () => ({
   type: REMOVE_GOAL,
-  goalId
+  
 });
 
 
@@ -50,7 +50,12 @@ export const updateGoal = (goal) => dispatch => (
 );
 
 export const deleteGoal = (goalId) => dispatch => (
-  APIUtil.deleteGoal(goalId).then(() => (
-    dispatch(removeGoal(goalId))
+  APIUtil.destroyGoal(goalId).then(() => (
+    dispatch(removeGoal())
   ))
 );
+
+// export const deleteGoal = (goalId) => dispatch => {
+//   APIUtil.destroyGoal(goalId)
+//   dispatch(removeGoal())
+// };

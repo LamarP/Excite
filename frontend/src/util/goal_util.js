@@ -14,11 +14,10 @@ export const postGoal = (goal) => {
     return axios.post(`/api/goals/goal`, goal);
 };
 
-export const patchGoal = (goalId, goal) => {
-    // return axios.patch(`/api/goals/goal/?goalId=${goal._id}`, goal);
-    return axios.patch('./api/goals/goal', { params: { goalId: goalId }, goal })
+export const patchGoal = (goal) => {
+    return axios.patch('/api/goals/goal', { goalId: goal._id, goal} )
 };
 
-export const deleteGoal = (goalId) => {
-    return axios.delete('/api/goals/goal/'), {params: {goalId: goalId}};
+export const destroyGoal = (goalId) => {
+    return axios.delete('/api/goals/goal', { params: {goalId: goalId}});
 };
