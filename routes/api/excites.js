@@ -1,23 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const ExcitesController = require('../../controllers/excites');
-const ScenesController = require('../../controllers/scenes');
-
 
 router.get('/', async (req, res) => {
-    const excites = await ExcitesController.index()
-    res.send(excites)
+    const excites = await ExcitesController.index();
+    res.send(excites);
  
 });
 
 router.get('/excite', async(req, res) => {
-    const scene = ScenesController.getScene(req.query.sceneId)
-    const excite = await ExcitesController.getExcite(scene.excite)
-    res.send(excite)
-})
+    const excite = await ExcitesController.getExcite(req.query.exciteId);
+    res.send(excite);
+});
 
 router.post('/excite', async(req, res) => {
-    const excite = await ExcitesController.createExcite(req.query.payload); 
-    res.send(excite)
-})
+    const excite = await ExcitesController.createExcite(req.body.payload); 
+    res.send(excite);
+});
+
+router.delete('/excite', async(req, res) => {
+    const excite = await ExcitesController.deleteExcite(req.query.id);
+    res.send(excite);
+});
+
 module.exports = router;

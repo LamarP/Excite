@@ -9,7 +9,6 @@ class SceneIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.scenes)
     if(!this.props.scenes) return null;
     return(
       <div className='scene-index'>

@@ -35,12 +35,6 @@ import { logout } from './actions/session_actions';
 
 
 import {fetchScene} from './actions/scene_actions';
-import {fetchExcite} from './util/excite_util'
-import {updateGoal} from './actions/goal_actions';
-import {fetchGoals} from './actions/goal_actions';
-import {deleteGoal} from './actions/goal_actions';
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -71,10 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.getState = store.getState;
   window.fetchScene = fetchScene;
-  window.fetchExcite = fetchExcite;
-  window.updateGoal = updateGoal;
-  window.fetchGoals = fetchGoals;
-  window.deleteGoal = deleteGoal;
   window.dispatch = store.dispatch;
   const root = document.getElementById('root');
 

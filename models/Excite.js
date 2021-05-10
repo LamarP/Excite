@@ -1,22 +1,28 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-
 const ExciteSchema = new Schema({
   title: {
     type: String,
     required: true
   },
-  scene: {
+  sceneId: {
     type: Schema.Types.ObjectId, 
     ref: 'Scene'
   }, 
+  sceneUrl: {
+    type: String, 
+    required: true
+  },
+  sceneImage: {
+    type: String, 
+    required: true
+  },
   users: [
     {type: Schema.Types.ObjectId, ref: "User"}
   ], 
   sounds: [
-    {type: Schema.Types.ObjectId, ref: "Sound"}
+    {type: String, ref: "Sound"}
   ]
 }, {timestamps: true})
 
