@@ -14,10 +14,6 @@ const ExciteSchema = new Schema({
     type: String, 
     required: true
   },
-  sceneTitle: {
-    type:String, 
-    required: true
-  },
   sceneImage: {
     type: String, 
     required: true

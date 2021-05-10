@@ -14,13 +14,16 @@ const ExcitesController = {
             title: payload.title, 
             sceneId: payload.sceneId, 
             sceneUrl: payload.sceneUrl, 
-            sceneTitle: payload.sceneTitle, 
             sceneImage: payload.sceneImage, 
             users: [payload.users], 
             sounds: [payload.sounds]
         });
         const result = await excite.save();
         return result;
+    }, 
+    deleteExcite: async(id) => {
+        const excite = await Excite.deleteOne({_id: id});
+        return excite
     }
 };
 

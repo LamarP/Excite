@@ -14,7 +14,12 @@ router.get('/excite', async(req, res) => {
 });
 
 router.post('/excite', async(req, res) => {
-    const excite = await ExcitesController.createExcite(req.body); 
+    const excite = await ExcitesController.createExcite(req.body.payload); 
+    res.send(excite);
+});
+
+router.delete('/excite', async(req, res) => {
+    const excite = await ExcitesController.deleteExcite(req.query.id);
     res.send(excite);
 });
 
