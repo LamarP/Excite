@@ -14,6 +14,7 @@ router.get('/excite', async(req, res) => {
 });
 
 router.post('/excite', async(req, res) => {
+
     const excite = await ExcitesController.createExcite(req.body.payload); 
     res.send(excite);
 });

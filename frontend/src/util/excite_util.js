@@ -4,10 +4,10 @@ export const fetchExcites = () => {
     return axios.get('/api/excites/');
 };
 
-export const fetchExcite = (sceneId) => {
+export const fetchExcite = (exciteId) => {
     return axios.get('/api/excites/excite', {
         params: {
-            sceneId: sceneId
+            exciteId: exciteId
         }
     });
 };
