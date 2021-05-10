@@ -8,13 +8,10 @@ const GoalSchema = new Schema({
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: 'users'
+    ref: 'users', 
+    required: true
   },
-  excite: {
-    type: Schema.Types.ObjectId,
-    ref: 'excites'
-  }
-
+  excites: [{ type: String, ref: "Excite" }],
 }, {
   timestamps: true 
 })

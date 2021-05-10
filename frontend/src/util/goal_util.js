@@ -5,13 +5,18 @@ export const allGoals = () => {
     return axios.get('/api/goals/');
 };
 
+export const userGoals = userId => {
+    return axios.get('/api/goals/', { params: { userId: userId }} );
+};
+
+
 
 export const fetchGoal = (goalId) => {
     return axios.get(`/api/goals/goal`, { params: { goalId: goalId } });
 };
 
-export const postGoal = (goal) => {
-    return axios.post(`/api/goals/goal`, goal);
+export const postGoal = (payload) => {
+    return axios.post(`/api/goals/goal`, {payload});
 };
 
 export const patchGoal = (goal) => {

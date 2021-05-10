@@ -35,7 +35,7 @@ import { logout } from './actions/session_actions';
 
 
 import {fetchScene} from './actions/scene_actions';
-
+import {createExcite, deleteExcite} from './actions/excite_actions'
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   
@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   window.getState = store.getState;
+  window.createExcite = createExcite;
+  window.deleteExcite = deleteExcite;
   window.fetchScene = fetchScene;
   window.dispatch = store.dispatch;
   const root = document.getElementById('root');

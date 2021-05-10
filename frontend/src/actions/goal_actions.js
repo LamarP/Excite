@@ -7,9 +7,9 @@ export const REMOVE_GOAL = 'REMOVE_GOAL';
 // Normal actions
 
 
-export const receiveAllGoals = (payload) => ({
+export const receiveAllGoals = goals => ({
   type: RECEIVE_ALL_GOALS,
-  goals: payload
+  goals
 });
 
 export const receiveGoal = goal => ({
@@ -17,9 +17,9 @@ export const receiveGoal = goal => ({
   goal
 });
 
-export const removeGoal = () => ({
+export const removeGoal = id => ({
   type: REMOVE_GOAL,
-  
+  _id: id
 });
 
 
@@ -30,6 +30,12 @@ export const fetchGoals = () => dispatch => (
     dispatch(receiveAllGoals(res))
   ))
 );
+
+export const fetchUserGoals = userId => dispatch => (
+  APIUtil.userGoals(userId).then(res => (
+    dispatch(receiveAllGoals(res))
+  ))
+)
 
 export const fetchGoal = (goalId) => dispatch => (
   APIUtil.fetchGoal(goalId).then(res => (
@@ -50,12 +56,7 @@ export const updateGoal = (goal) => dispatch => (
 );
 
 export const deleteGoal = (goalId) => dispatch => (
-  APIUtil.destroyGoal(goalId).then(() => (
-    dispatch(removeGoal())
+  APIUtil.destroyGoal(goalId).then((_id) => (
+    dispatch(removeGoal(_id))
   ))
 );
-
-// export const deleteGoal = (goalId) => dispatch => {
-//   APIUtil.destroyGoal(goalId)
-//   dispatch(removeGoal())
-// };

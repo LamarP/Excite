@@ -9,19 +9,26 @@ const GoalsController = {
       const result = await Goal.findById(id);
       return result;
   },
-  postGoal: async(title) => {
-      const goal = new Goal({title: title});
-      const result = await goal.save();
+  postGoal: async(payload) => {
+      const res = new Goal({
+        title: payload.title, 
+        userId: payload.userId
+      });
+      const result = await res.save();
       return result;
   }, 
   updateGoal: async(goalId, payload) => {
     const query = {_id: goalId};
-    const goal = await Goal.updateOne(query, payload);
+    const goal = await Goal.updateOne(query, {
+      title: payload.title, 
+      userId: payload.userId, 
+      excites: payload.excites
+    });
     return goal;
   },
   deleteGoal: async(goalId) => {
       const goal = await Goal.deleteOne({_id: goalId});
-      return goal;
+      return goalId;
       
   }
 }
