@@ -18,7 +18,7 @@ router.post('/goal', (req, res) => {
 });
 
 router.patch('/goal', (req, res) => {
-  GoalsController.updateGoal(req.body.goalId, req.body)
+  GoalsController.updateGoal(req.body.goal.goalId, req.body.goal)
   .then(() => res.send({success: true}))
   .catch(() => res.status(422).json({msg: 'Could not find goal'}))
 });

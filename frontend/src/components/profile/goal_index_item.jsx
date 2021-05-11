@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Modal from './modal'
+import ModalContainer from './modal_container';
 
 class GoalIndexItem extends React.Component {
     constructor(props) {
@@ -30,28 +30,35 @@ class GoalIndexItem extends React.Component {
   
 
     render() {
-        if(this.state.excites.length < 1 && this.props.goal.title) return (
-            <div className="goal-item-container">
-                <h3 className="goal-title">{this.props.goal.title}</h3>
-            </div>
-        );
-        if(this.state.excites.length === 0) return null;
-        const exciteLinks = this.props.goal.excites.map((exciteId, idx) => (
-            <Link key={idx} to={`/explore/${exciteId}`}>
-                <img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/>
-            </Link>
-        ));
-        let exciteModal = this.state.openModal ? <Modal /> : <div></div>;
-        return(
-            <div className="goal-item-container">
-                <h3 className="goal-title">{this.props.goal.title}</h3>
-                <div className="goal-img-container">
-                   {exciteLinks}
+        if(!this.props.goal.title) return null;
+
+        let exciteModal = this.state.openModal ? <ModalContainer goal={this.props.goal}/> : <div></div>;
+        let modalBtn = <button onClick={this.modalToggle} className="goal-excite-add">+</button>;
+
+        const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
+            return this.state.excites[idx] ? <Link key={idx} to={`/explore/${exciteId}`}><img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/></Link> : null;
+        });
+
+        if(this.state.excites.length === 0 && this.props.goal.title) {
+            return (
+                <div className="goal-item-container">
+                    <h3 className="goal-title">{this.props.goal.title}</h3>
+                    {modalBtn}
+                    {exciteModal}
                 </div>
-                <button onClick={this.modalToggle} className="goal-excite-add">+</button>
-                {exciteModal}
-            </div>
-        )
+            )
+        } else {
+            return(
+                <div className="goal-item-container">
+                    <h3 className="goal-title">{this.props.goal.title}</h3>
+                    <div className="goal-img-container">
+                        {exciteLinks}
+                    </div>
+                    {modalBtn}
+                    {exciteModal}
+                </div>
+            )
+        }
     }
 }
 
