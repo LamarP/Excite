@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, withRouter} from 'react-router-dom';
-import ReactAudioPlayer from 'react-audio-player';
+import {withRouter} from 'react-router-dom';
+// import ReactAudioPlayer from 'react-audio-player';
 
 class SoundsIndexItem extends React.Component {
   

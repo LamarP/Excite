@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import { Link, withRouter } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 
 class SoundShow extends React.Component {
   constructor(props) {

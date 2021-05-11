@@ -6,6 +6,7 @@ class GoalIndexItem extends React.Component {
         this.state = { excites: [] }
     }
     componentDidMount() {
+        console.log('goal')
         const result = []
         this.props.goal.excites.forEach((excite) => {
             this.props.fetchExcite(excite)
@@ -14,8 +15,8 @@ class GoalIndexItem extends React.Component {
         this.setState({excites: result})
     };
     render() {
-        if(!this.props.goal.excites[0]) return null;
-        if(this.state.excites.length === 0) return null;
+        // if(!this.props.goal.excites[0]) return null;
+        // if(this.state.excites.length === 0) return null;
         return(
             <div>
                 <h3>{this.props.goal.title}</h3>

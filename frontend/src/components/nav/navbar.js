@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import song from '../../One Ok Rock Onion English Sub.mp3';
+// import song from '../../One Ok Rock Onion English Sub.mp3';
 
 
 class NavBar extends React.Component {

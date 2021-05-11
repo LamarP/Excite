@@ -75,11 +75,11 @@ class LoginForm extends React.Component {
     //         <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type="audio/ogg" />
     //     </audio>);
     // }
-update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-}
+// update(field) {
+//     return e => this.setState({
+//       [field]: e.currentTarget.value
+//     });
+// }
 
   renderDemo() {
       return (
