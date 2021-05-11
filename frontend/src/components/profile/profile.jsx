@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 import GoalIndexItem from './goal_index_item';
 import GoalCreateFormContainer from './goal_create_form_container';
 
+
 class Profile extends React.Component {
     constructor(props) {
         super(props)
         this.formToggle = this.formToggle.bind(this)
         this.state = {showForm: false}
-        this.formRef = React.createRef()
     }
     formToggle() {
         if(!this.state.showForm) {
@@ -18,6 +18,7 @@ class Profile extends React.Component {
             this.setState({showForm: false})
         }
     };
+
     componentDidMount() {
         this.props.fetchUserGoals(this.props.user.id)
     }
@@ -27,11 +28,8 @@ class Profile extends React.Component {
             <GoalIndexItem key={idx} goal={goal} fetchExcite={this.props.fetchExcite} user={this.props.user}/>
         ));
         let createForm;
-        if(this.state.showForm) {
-            createForm = <GoalCreateFormContainer formRef={this.formRef}  />
-        } else {
-            createForm = <div></div>
-        }
+        this.state.showForm ? createForm = <GoalCreateFormContainer /> :  createForm = <div></div>;
+        
         return (
             <div>
                 <div className="goal-create-container">

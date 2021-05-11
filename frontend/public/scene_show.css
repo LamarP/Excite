@@ -560,3 +560,8 @@ label.mute {
   color: white;
   cursor: pointer;
 }
+
+.goal-excite-add {
+  color: white;
+  font-size: 25px;
+}

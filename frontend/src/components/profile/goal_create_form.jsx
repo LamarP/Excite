@@ -34,7 +34,6 @@ class GoalCreateForm extends React.Component {
 
     render() {
         if(!this.props.user) return null;
-        console.log(this.props)
         return(
             <div className="goal-create-container">
                 <form className="goal-create-form" onSubmit={this.handleSubmit}>
