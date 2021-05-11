@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
 import {fetchUserGoals} from '../../actions/goal_actions';
-import {fetchExcite} from '../../actions/excite_actions';
+import {fetchExcite, fetchExcites} from '../../actions/excite_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state, props) => {
      return {
          user: state.session.user, 
-         goals: state.goals
+         goals: state.goals, 
+         excites: Object.values(state.excites)
      }
 }; 
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
        fetchUserGoals: userId => dispatch(fetchUserGoals(userId)), 
-       fetchExcite: exciteId => dispatch(fetchExcite(exciteId))
+       fetchExcite: exciteId => dispatch(fetchExcite(exciteId)), 
+       fetchExcites: excites => dispatch(fetchExcites(excites))
     }
 }
 
