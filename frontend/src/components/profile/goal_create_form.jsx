@@ -17,6 +17,15 @@ class GoalCreateForm extends React.Component {
             userId: this.props.user.id
         };
         this.props.processForm(goal)
+            .then((res) => {
+                window.location.reload();
+                return false;
+                // let list = document.querySelector(".goal-item-container");
+                // console.log(list)
+                // let p = <h3 className="goal-title">{this.state.title}</h3>;
+                // // p.innerHTML = 'hello';
+                // list.append(p)
+            })
     }
 
     update(key) {
@@ -25,6 +34,7 @@ class GoalCreateForm extends React.Component {
 
     render() {
         if(!this.props.user) return null;
+        console.log(this.props)
         return(
             <div className="goal-create-container">
                 <form className="goal-create-form" onSubmit={this.handleSubmit}>

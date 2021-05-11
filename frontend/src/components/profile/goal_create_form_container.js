@@ -3,7 +3,8 @@ import GoalCreateForm from './goal_create_form';
 import {connect} from 'react-redux';
 
 const mSTP = state => ({
-    user: state.session.user
+    user: state.session.user,
+    goals: state.goals
 });
 
 const mDTP = dispatch => ({

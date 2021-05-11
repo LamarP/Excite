@@ -14,7 +14,8 @@ class ExciteShow extends React.Component {
     }
 
     handleClick() {
-        this.props.history.push('/explore');
+        // this.props.history.push('/explore');
+        this.props.history.goBack();
     }
 
     render() {

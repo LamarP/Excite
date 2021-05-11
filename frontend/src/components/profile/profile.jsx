@@ -9,6 +9,7 @@ class Profile extends React.Component {
         super(props)
         this.formToggle = this.formToggle.bind(this)
         this.state = {showForm: false}
+        this.formRef = React.createRef()
     }
     formToggle() {
         if(!this.state.showForm) {
@@ -27,7 +28,7 @@ class Profile extends React.Component {
         ));
         let createForm;
         if(this.state.showForm) {
-            createForm = <GoalCreateFormContainer/>
+            createForm = <GoalCreateFormContainer formRef={this.formRef}  />
         } else {
             createForm = <div></div>
         }
