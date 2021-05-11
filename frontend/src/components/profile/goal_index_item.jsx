@@ -32,29 +32,39 @@ class GoalIndexItem extends React.Component {
     render() {
         if(!this.props.goal.title) return null;
 
-        let exciteModal = this.state.openModal ? <ModalContainer goal={this.props.goal}/> : <div></div>;
+        let exciteModal = this.state.openModal ? <div className='modal-background' onClick={this.modalToggle}><ModalContainer goal={this.props.goal}/></div> : <div></div>;
         let modalBtn = <button onClick={this.modalToggle} className="goal-excite-add">+</button>;
 
         const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
-            return this.state.excites[idx] ? <Link key={idx} to={`/explore/${this.state.excites[idx]._id}`}><img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/></Link> : null;
+            return this.state.excites[idx] ? 
+            
+            <div className='scene-index-item'>
+                <Link key={idx} to={`/explore/${this.state.excites[idx]._id}`}><img src={this.state.excites[idx].sceneImage} alt="" width="319" height="240"/>
+                    <div className='excite-index-item-title' >{this.state.excites[idx].title}</div>
+
+                
+                </Link> 
+            </div>
+            : null;
+           
         });
 
         if(this.state.excites.length === 0 && this.props.goal.title) {
             return (
                 <div className="goal-item-container">
-                    <h3 className="goal-title">{this.props.goal.title}</h3>
-                    {modalBtn}
+                    <h3 className="goal-title">{this.props.goal.title} {modalBtn}</h3>
+                    {/* {modalBtn} */}
                     {exciteModal}
                 </div>
             )
         } else {
             return(
                 <div className="goal-item-container">
-                    <h3 className="goal-title">{this.props.goal.title}</h3>
+                    <h3 className="goal-title">{this.props.goal.title} {modalBtn}</h3>
                     <div className="goal-img-container">
                         {exciteLinks}
                     </div>
-                    {modalBtn}
+                    {/* {modalBtn} */}
                     {exciteModal}
                 </div>
             )

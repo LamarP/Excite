@@ -33,11 +33,13 @@ class Modal extends React.Component {
             </li>
         ))
         return(
-           <div>
-               <ul className="modal-excite-list-container">
-                   {excitesList}
-               </ul>
-           </div>
+           
+                <div className='modal-child' onClick={e => e.stopPropagation()}>
+                        <ul className="modal-excite-list-container">
+                            {excitesList}
+                        </ul>
+                </div>
+       
         );
     };
 };

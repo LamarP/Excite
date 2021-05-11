@@ -565,3 +565,60 @@ label.mute {
   color: white;
   font-size: 25px;
 }
+
+ /* styles for the modal  */
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-size: 16px;
+  background: #fff;
+  width: 492px;
+  height: 595px;
+}
+
+
+.goal-img-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-top: 120px;
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-decoration: none; */
+}
+
+ @media all and (max-width: 1000px) {
+  .goal-img-container {
+      display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-decoration: none;
+  }
+
+  .goal-item-container{
+        width: 100%;
+    }
+ }
