@@ -36,7 +36,7 @@ class GoalIndexItem extends React.Component {
         let modalBtn = <button onClick={this.modalToggle} className="goal-excite-add">+</button>;
 
         const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
-            return this.state.excites[idx] ? <Link key={idx} to={`/explore/${exciteId}`}><img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/></Link> : null;
+            return this.state.excites[idx] ? <Link key={idx} to={`/explore/${this.state.excites[idx]._id}`}><img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/></Link> : null;
         });
 
         if(this.state.excites.length === 0 && this.props.goal.title) {
