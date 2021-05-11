@@ -528,7 +528,35 @@ label.mute {
   font-size: 40px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
-  /* height: 30px; */
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.goal-title {
+  text-align: center;
+  font-size: 35px;
+  font-family: Helvetica Neue;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+
+}
+
+.goal-excite-img{
+  padding-top: 20px;
+}
+
+.goal-item-container{
+  width: 20%;
+}
+
+.goal-create-button {
+  font-size: 25px;
+  color: white;
+  padding-top: 50px;
+}
+
+.goal-create-submit {
+  color: white;
+  cursor: pointer;
 }
