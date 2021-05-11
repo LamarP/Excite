@@ -12,7 +12,6 @@ router.get('/goal', async(req, res) => {
 });
 
 router.post('/goal', (req, res) => {
-  console.log(req)
  GoalsController.postGoal(req.body.payload)
   .then(() => res.send({success:true}))
   .catch(() => res.status(422).json({msg: 'Could not create goal'}))

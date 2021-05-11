@@ -26,13 +26,16 @@ class GoalIndexItem extends React.Component {
             </div>
         );
         if(this.state.excites.length === 0) return null;
+        const exciteLinks = this.props.goal.excites.map((exciteId, idx) => (
+            <Link key={idx} to={`/explore/${exciteId}`}>
+                <img className="goal-excite-img"src={this.state.excites[idx].sceneImage} alt="" width="100" height="50"/>
+            </Link>
+        ))
         return(
             <div className="goal-item-container">
                 <h3 className="goal-title">{this.props.goal.title}</h3>
                 <div className="goal-img-container">
-                    <Link to={`/explore/${this.props.goal.excites[0]}`}>
-                        <img className="goal-excite-img"src={this.state.excites[0].sceneImage} alt="" width="100" height="50"/>
-                    </Link>
+                   {exciteLinks}
                 </div>
             </div>
         )

@@ -22,7 +22,7 @@ const GoalsController = {
     const goal = await Goal.updateOne(query, {
       title: payload.title, 
       userId: payload.userId, 
-      excites: payload.excites
+      $push: {excites: payload.excites}
     });
     return goal;
   },
