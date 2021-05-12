@@ -24,7 +24,8 @@ class GoalIndexItem extends React.Component {
            const fetchedResults = await this.props.fetchExcite(excite)
            result.push(fetchedResults.excite);
         });
-        setTimeout(() => this.setState({excites: result}), 200 )
+        setTimeout(() => this.setState({excites: result}), 500 )
+        // this.setState({excites: result})
     };
 
   
@@ -46,8 +47,8 @@ class GoalIndexItem extends React.Component {
             return (
                 <div className="goal-item-container">
                     <div className='goal-options'>
-                        <div className="goal-title">{this.props.goal.title}</div>
-                        {modalBtn}
+                        <div className="goal-title">{this.props.goal.title}{modalBtn}</div>
+                        
                     </div>
                     {/* {modalBtn} */}
                     {exciteModal}

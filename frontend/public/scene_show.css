@@ -314,7 +314,9 @@ body {
 }
 
 .scene-index-item:hover {
+  /* position: fixed; */
    transform: scale(1.03);
+   /* padding-bottom: 10px; */
 }
 
 
@@ -434,6 +436,7 @@ body {
 .flex-sounds {
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }
 
 .landing-title {
@@ -577,7 +580,7 @@ label.mute {
   padding-right: 100px;
   margin-bottom: 20px;
   /* background-color: rgba(240,240,240,0.2); */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .goal-excite-add {
@@ -804,6 +807,15 @@ label.mute {
 
 .fas{
   color: rgb(245, 80, 124);
+  position: fixed;
+  bottom: -40px;
+  transform: scale(1.7);
+  padding-top: 3px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 15px;
 }
 
-
+.profile-page {
+  padding-bottom: 100px;
+}

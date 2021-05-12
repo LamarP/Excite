@@ -20,6 +20,7 @@ class ExciteShow extends React.Component {
 
     render() {
        if(!this.props.sounds.config) return null;
+       if(!this.props.excite) return null;
        console.log(this.props)
        return(
            <div>

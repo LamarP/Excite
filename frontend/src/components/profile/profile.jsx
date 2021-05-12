@@ -47,7 +47,7 @@ class Profile extends React.Component {
         this.state.showForm ? createForm = <GoalCreateFormContainer /> :  createForm = <div></div>;
         
         return (
-            <div>
+            <div className='profile-page'>
                 <div className="goal-create-container">
                     <button className="goal-create-button" onClick={this.modalToggle}>+ Create Goal</button>
                     {createForm}
