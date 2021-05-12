@@ -2,6 +2,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ModalContainer from './modal_container';
+import GoalExcite from './goal_excite';
 
 class GoalIndexItem extends React.Component {
     constructor(props) {
@@ -39,16 +40,7 @@ class GoalIndexItem extends React.Component {
             </div>;
 
         const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
-            return this.state.excites[idx] ? 
-            
-            <div key={idx} className='scene-index-item'>
-                <Link key={idx} to={`/explore/${this.state.excites[idx]._id}`}>
-                    <img src={this.state.excites[idx].sceneImage} alt="" width="153.12" height="115.2"/>
-                    {/* <div className='excite-index-item-title' >{this.state.excites[idx].title}</div> */}
-                </Link> 
-            </div>
-            : null;
-           
+           return this.state.excites[idx] ? <GoalExcite key={idx} exciteId={exciteId} excite={this.state.excites[idx]}/> : null;
         });
 
         if(this.state.excites.length === 0 && this.props.goal.title) {

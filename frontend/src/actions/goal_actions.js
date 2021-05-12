@@ -54,6 +54,11 @@ export const updateGoal = (goal) => dispatch => (
     dispatch(receiveGoal(res))
   ))
 );
+export const removeExcite = (goal) => dispatch => (
+  APIUtil.removeExcite(goal).then(res => (
+    dispatch(receiveGoal(res))
+  ))
+);
 
 export const deleteGoal = (goalId) => dispatch => (
   APIUtil.destroyGoal(goalId).then((_id) => (

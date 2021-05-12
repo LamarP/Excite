@@ -23,6 +23,12 @@ router.patch('/goal', (req, res) => {
   .catch(() => res.status(422).json({msg: 'Could not find goal'}))
 });
 
+router.patch('/goal/excite', (req, res) => {
+  GoalsController.removeExcite(req.body.goal.goalId, req.body.goal)
+    .then(() => res.send({success: true}))
+    .catch(() => res.status(422).json({msg: 'Could not find goal'}))
+});
+
 router.delete('/goal', (req, res) => {
   GoalsController.deleteGoal(req.query.goalId)
     .then((_id) => res.send({_id}))
