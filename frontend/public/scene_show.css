@@ -589,6 +589,18 @@ label.mute {
   position: relative;
 }
 
+.goal-excite-bubble:hover {
+  transform: scale(1.03);
+  background-color: rgb(245, 80, 124);
+  cursor: pointer;
+}
+
+.goal-excite-add:hover {
+  transform: scale(1.03);
+  background-color: rgb(245, 80, 124);
+  cursor: pointer;
+}
+
 .goal-options {
   /* display: flex;
   justify-content: row; */
@@ -695,6 +707,8 @@ label.mute {
 
 .modal-excite-list-item:hover {
   transform: scale(1.03);
+  background-color: #ffffff;
+  cursor: pointer;
 }
 
  @media all and (max-width: 1000px) {
