@@ -534,8 +534,10 @@ label.mute {
 
 .goal-title {
   text-align: center;
-  font-size: 35px;
-  font-family: Helvetica Neue;
+  font-size: 50px;
+  /* font-family: Helvetica Neue; */
+    font-family: 'Lobster', cursive;
+
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
@@ -562,8 +564,35 @@ label.mute {
 }
 
 .goal-excite-add {
+  /* display: inline-block; */
   color: white;
   font-size: 25px;
+  /* margin-top: 12.5px; */
+  /* margin-bottom: 12.5px; */
+  top: 7.5px;
+  right: 17.5px;
+  position: absolute;
+}
+
+.goal-excite-bubble {
+  /* position: absolute; */
+  /* top: 5%; */
+  /* right: 3%; */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(246, 100, 139);
+  display: inline-block;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  position: relative;
+}
+
+.goal-options {
+  /* display: flex;
+  justify-content: row; */
+  /* display: inline-block; */
 }
 
  /* styles for the modal  */
@@ -597,7 +626,8 @@ label.mute {
   grid-template-columns: repeat(5, 1fr);
   margin-right: 12%;
   margin-left: 12%;
-  margin-top: 120px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   /* display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -605,6 +635,23 @@ label.mute {
   flex-wrap: wrap;
   flex-direction: row;
   text-decoration: none; */
+}
+
+.modal-excite-list-item {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  /* position: relative; */
+  /* text-align: center; */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: orange;
+}
+
+.modal-list-title {
+  /* position: absolute; */
+  margin-left: 120px;
 }
 
  @media all and (max-width: 1000px) {
@@ -622,3 +669,4 @@ label.mute {
         width: 100%;
     }
  }
+
