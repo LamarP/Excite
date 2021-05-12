@@ -39,7 +39,7 @@ class GoalIndexItem extends React.Component {
             </div>;
 
         const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
-           return this.state.excites[idx] ? <GoalExcite key={idx} exciteId={exciteId} excite={this.state.excites[idx]} goal={this.props.goal} removeExcite={this.props.removeExcite}/> : null;
+           return this.state.excites[idx] ? <GoalExcite key={idx} exciteId={this.state.excites[idx]._id} excite={this.state.excites[idx]} goal={this.props.goal} removeExcite={this.props.removeExcite}/> : null;
         });
 
         if(this.state.excites.length === 0 && this.props.goal.title) {
