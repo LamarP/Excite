@@ -1,6 +1,5 @@
 
 import React from 'react';
-import {Link} from 'react-router-dom';
 import ModalContainer from './modal_container';
 import GoalExcite from './goal_excite';
 
@@ -40,7 +39,7 @@ class GoalIndexItem extends React.Component {
             </div>;
 
         const exciteLinks = this.props.goal.excites.map((exciteId, idx) => {
-           return this.state.excites[idx] ? <GoalExcite key={idx} exciteId={exciteId} excite={this.state.excites[idx]}/> : null;
+           return this.state.excites[idx] ? <GoalExcite key={idx} exciteId={exciteId} excite={this.state.excites[idx]} goal={this.props.goal} removeExcite={this.props.removeExcite}/> : null;
         });
 
         if(this.state.excites.length === 0 && this.props.goal.title) {

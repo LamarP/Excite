@@ -25,7 +25,7 @@ class Profile extends React.Component {
     render() {
         if(!this.props.goals.data) return null;
         const goals = this.props.goals.data.map((goal, idx) => (
-            <GoalIndexItem key={idx} goal={goal} fetchExcite={this.props.fetchExcite} user={this.props.user}/>
+            <GoalIndexItem key={idx} goal={goal} fetchExcite={this.props.fetchExcite} user={this.props.user} removeExcite={this.props.removeExcite}/>
         ));
         let createForm;
         this.state.showForm ? createForm = <GoalCreateFormContainer /> :  createForm = <div></div>;
