@@ -9,3 +9,7 @@ export const allScenes = () => {
 export const fetchScene = (sceneId) => {
     return axios.get(`/api/scenes/scene`, {params: {sceneId: sceneId}});
 };
+
+export const fetchSceneModels = () => {
+    return axios.get('/api/scenes/models');
+}

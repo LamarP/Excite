@@ -5,8 +5,8 @@ const ScenesController = {
         const result = await Scene.find();
         return result
     },
-    getScene: async(pexelId) => {
-        const result = await Scene.findOne( {pexelId: pexelId})
+    getScene: async(id) => {
+        const result = await Scene.findById(id)
         return result;
     }
 }

@@ -730,3 +730,7 @@ label.mute {
 .fas{
   color: rgb(245, 80, 124);
 }
+
+.drop-container {
+  cursor: pointer;
+}

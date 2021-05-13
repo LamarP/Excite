@@ -31,3 +31,9 @@ export const fetchScene = (sceneId) => dispatch => (
     dispatch(receiveScene(res))
   ))
 );
+
+export const fetchSceneModels = () => dispatch => (
+  APIUtil.fetchSceneModels().then(res => (
+    dispatch(receiveAllScenes(res))
+  ))
+)
