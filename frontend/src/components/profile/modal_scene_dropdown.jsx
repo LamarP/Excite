@@ -14,7 +14,6 @@ class ModalSceneDropdown extends React.Component {
             <ul>
                 {sceneLIst}
             </ul>
-            
         )
     }
 }

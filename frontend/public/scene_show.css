@@ -807,6 +807,14 @@ label.mute {
 
 .fas{
   color: rgb(245, 80, 124);
+
+
+}
+
+.drop-container {
+  cursor: pointer;
+}
+
   position: fixed;
   bottom: -40px;
   transform: scale(1.7);
@@ -819,3 +827,5 @@ label.mute {
 .profile-page {
   padding-bottom: 100px;
 }
+
+

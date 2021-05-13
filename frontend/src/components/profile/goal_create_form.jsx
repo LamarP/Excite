@@ -20,11 +20,6 @@ class GoalCreateForm extends React.Component {
             .then((res) => {
                 window.location.reload();
                 return false;
-                // let list = document.querySelector(".goal-item-container");
-                // console.log(list)
-                // let p = <h3 className="goal-title">{this.state.title}</h3>;
-                // // p.innerHTML = 'hello';
-                // list.append(p)
             })
     }
 

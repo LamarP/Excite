@@ -4,28 +4,31 @@ import { withRouter } from 'react-router-dom';
 import GoalIndexItem from './goal_index_item';
 import GoalCreateFormContainer from './goal_create_form_container';
 import GoalTitleModal from './goal_title_modal';
+import ExciteModalContainer from './excite_modal_container';
 
 
 class Profile extends React.Component {
     constructor(props) {
         super(props)
-        // this.formToggle = this.formToggle.bind(this)
-        this.state = {showForm: false}
-        this.modalToggle = this.modalToggle.bind(this);
+
+        this.goalFormToggle = this.goalFormToggle.bind(this);
+        this.exciteFormToggle = this.exciteFormToggle.bind(this);
+        this.state = {showGoalForm: false, showExciteForm: false}
     }
-    // formToggle() {
-    //     if(!this.state.showForm) {
-    //         this.setState({showForm:true})
-    //     } else {
-    //         this.setState({showForm: false})
-    //     }
-    // };
-    modalToggle() {
-        if (!this.state.openModal) {
-            this.setState({ openModal: true })
+    goalFormToggle() {
+        if(!this.state.showGoalForm) {
+            this.setState({showGoalForm:true, showExciteForm: false})
         } else {
-            this.setState({ openModal: false })
+            this.setState({showGoalForm: false})
         }
+    };
+    exciteFormToggle() {
+        if(!this.state.showExciteForm) {
+            this.setState({showExciteForm:true, showGoalForm: false})
+        } else {
+            this.setState({showExciteForm: false})
+        }
+
     }
 
     componentDidMount() {
@@ -44,13 +47,18 @@ class Profile extends React.Component {
             <GoalIndexItem key={idx} goal={goal} fetchExcite={this.props.fetchExcite} user={this.props.user} removeExcite={this.props.removeExcite}/>
         ));
         let createForm;
-        this.state.showForm ? createForm = <GoalCreateFormContainer /> :  createForm = <div></div>;
-        
+        let exciteForm;
+        this.state.showGoalForm ? createForm = <GoalCreateFormContainer /> :  createForm = <div></div>;
+        this.state.showExciteForm ? exciteForm = <ExciteModalContainer /> : exciteForm = <div></div>;
         return (
             <div className='profile-page'>
                 <div className="goal-create-container">
-                    <button className="goal-create-button" onClick={this.modalToggle}>+ Create Goal</button>
+
+                    <button className="goal-create-button" onClick={this.goalFormToggle}>+ Create Goal</button>
+                    <button className="goal-create-button" onClick={this.exciteFormToggle}>+ Create Excite</button>
+
                     {createForm}
+                    {exciteForm}
                 </div>
                 {goals}
                 {createModal}
