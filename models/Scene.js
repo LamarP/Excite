@@ -10,11 +10,14 @@ const SceneSchema = new Schema({
     type: String,
     required: true
   },
-  excite: {
-    type: Schema.Types.ObjectId,
-    ref: "Excite"
+  imageUrl: {
+    type: String, 
+    required: true
+  }, 
+  videoUrl: {
+    type: String, 
+    required: true
   }
-
 }, {
   timestamps: true 
 })

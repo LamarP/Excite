@@ -24,20 +24,9 @@ router.get("/", async (req, res) => {
   return res.json(collection);
 })
 
-router.post("/test", (req, res) => {
-  const newScene = new Scene({
-    sceneId: req.body.sceneId,
-    name: req.body.name
-  })
-  newScene.save()
-    .then((data) => {
-      res.json({
-        success: true,
-        data
-      });
-    })
-    .catch(err => console.log(err))
-  
+router.get("/models", async(req, res) => {
+  const results = await ScenesController.index();
+  res.send(results);
 })
 
 module.exports = router;

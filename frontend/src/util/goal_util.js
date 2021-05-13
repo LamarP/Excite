@@ -9,8 +9,6 @@ export const userGoals = userId => {
     return axios.get('/api/goals/', { params: { userId: userId }} );
 };
 
-
-
 export const fetchGoal = (goalId) => {
     return axios.get(`/api/goals/goal`, { params: { goalId: goalId } });
 };
@@ -21,6 +19,10 @@ export const postGoal = (payload) => {
 
 export const patchGoal = (goal) => {
     return axios.patch('/api/goals/goal', { goalId: goal._id, goal} )
+};
+
+export const removeExcite = (goal) => {
+    return axios.patch('/api/goals/goal/excite', {goalId: goal._id, goal})
 };
 
 export const destroyGoal = (goalId) => {

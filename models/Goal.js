@@ -11,7 +11,7 @@ const GoalSchema = new Schema({
     ref: 'users', 
     required: true
   },
-  excites: [{ type: String, ref: "Excite" }],
+  excites: [{ type: String, ref: "Excite" }, {unique: true}],
 }, {
   timestamps: true 
 })
