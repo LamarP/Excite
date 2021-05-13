@@ -46,8 +46,8 @@ class GoalIndexItem extends React.Component {
             return (
                 <div className="goal-item-container">
                     <div className='goal-options'>
-                        <div className="goal-title">{this.props.goal.title}</div>
-                        {modalBtn}
+                        <div className="goal-title">{this.props.goal.title}{modalBtn}</div>
+                        
                     </div>
                     {/* {modalBtn} */}
                     {exciteModal}
