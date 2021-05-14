@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {createExcite} from '../../actions/excite_actions';
 import {fetchSceneModels} from '../../actions/scene_actions'
 import {fetchSounds} from '../../actions/sound_actions'
-import ExciteModal from './excite_modal';
+import ExciteModal from './excite_form';
 
 const mSTP = state => ({
     user: state.session.user, 
