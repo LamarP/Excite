@@ -2,7 +2,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import GoalIndexItem from './goal_index_item';
-import GoalCreateFormContainer from './goal_create_form_container';
+// import GoalCreateFormContainer from './goal_create_form_container';
 import GoalTitleModal from './goal_title_modal';
 import ExciteModal from './excite_modal';
 

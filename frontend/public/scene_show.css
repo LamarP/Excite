@@ -180,7 +180,7 @@ body {
 }
 
 .auth-button:hover {
-  background-color: #f6648b;
+  background-color: #f84e7b;;
   color: #ddd;
 }
 
@@ -199,6 +199,10 @@ body {
   font-size: 180px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
+}
+
+.header-title:hover{
+  color: #f84e7b;
 }
 
 .navbar-parent {
@@ -574,6 +578,7 @@ input#un-mute {
 
 .unmute img {
     display: none;
+    cursor: pointer;
 }
 
 input#un-mute:checked ~ .unmute img {
@@ -590,23 +595,32 @@ input#un-mute:checked ~ .mute img {
 .mute-button {
   /* position: absolute; */
   z-index: 1;
-  height: 150px;
+  height: 80px;
   /* display: flex; */
   /* justify-content: center; */
   /* top: 3%;
   right: 3%; */
+  cursor: pointer;
 }
 .mute-button img {
   height: 50px;
   width: 50px;
-  margin-top: 12px;
-  margin-bottom: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
+
 
 label.mute {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
+
+label.unmute {
+  cursor: pointer;
+}
+
 
 .pink-circle {
   position: absolute;
@@ -618,6 +632,11 @@ label.mute {
   background-color: rgb(246, 100, 139);
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+
+.pink-circle:hover {
+  background-color: #f84e7b;
 }
 
 .excite-index-item-title {
