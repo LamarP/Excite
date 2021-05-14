@@ -294,15 +294,11 @@ body {
   padding-bottom: 100px;
 }
 
-.goal-grid-container {
-  display: flex;
-  justify-content: center;
-}
-
 .goal-grid-parent {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
 }
 
 .scene-index-item {
@@ -674,7 +670,9 @@ label.unmute {
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
-
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .goal-excite-img{
@@ -682,7 +680,7 @@ label.unmute {
 }
 
 .goal-item-container{
-  width: 30%;
+  /* width: 30%; */
 }
 
 .goal-create-button {
@@ -693,7 +691,6 @@ label.unmute {
   cursor: pointer;
 
 }
-
 
 .goal-create-button:hover {
   color: #ff3168;
@@ -863,12 +860,14 @@ label.unmute {
 
 .goal-img-container {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(5, 1fr);
-  margin-right: 12%;
-  margin-left: 12%;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin-right: 12%; */
+  /* margin-left: 12%; */
   margin-top: 30px;
   margin-bottom: 40px;
+  align-self: center;
   /* display: flex;
   justify-content: space-evenly;
   align-items: center;
