@@ -743,6 +743,7 @@ label.unmute {
   border-radius: 50%;
   background-color: rgb(246, 100, 139);
   display: inline-block;
+  margin-left: 15px;
   /* display: flex; */
   /* justify-content: center;
   align-items: center; */
