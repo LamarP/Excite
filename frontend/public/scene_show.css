@@ -294,6 +294,17 @@ body {
   padding-bottom: 100px;
 }
 
+.goal-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.goal-grid-parent {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .scene-index-item {
   /* color: black; */
   cursor: pointer;

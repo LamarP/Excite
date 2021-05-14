@@ -80,7 +80,12 @@ class Profile extends React.Component {
                     {createModal}
                     {exciteModal}
                 </div>
-                {goals}
+                <div className='goal-grid-container'>
+                    <div className='goal-grid-parent'>
+                        {goals}
+                    </div>
+                </div>
+                
                 {/* {createModal} */}
                 
             </div>
