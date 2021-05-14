@@ -63,7 +63,7 @@ class ExciteModal extends React.Component {
                     <button onClick={this.toggleSoundDropShow}>Select A Sound ⬇</button>
                     {sceneDropDown}
                     {soundDropDown}
-                    <form onSubmit={this.handleSubmit}>
+                    <form className="goal-create-form" onSubmit={this.handleSubmit}>
                             <input id="title" type="text" placeholder="Title" onChange={this.update("title")}/>
                         <button type="submit">Submit</button>
                     </form>
