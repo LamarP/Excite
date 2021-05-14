@@ -25,7 +25,7 @@ router.patch('/goal', (req, res) => {
 
 router.patch('/goal/excite', (req, res) => {
   GoalsController.removeExcite(req.body.goal.goalId, req.body.goal)
-    .then(() => res.send({success: true}))
+    .then((goal) => res.send(goal))
     .catch(() => res.status(422).json({msg: 'Could not find goal'}))
 });
 

@@ -8,6 +8,8 @@ const mapStateToProps = (state, ownProps) => {
          user: state.session.user, 
          goals: state.goals, 
          goal: ownProps.goal,
+         toggleForm: ownProps.toggleForm,
+         reRender: ownProps.reRender,
          excites: Object.values(state.excites)
      }
 }; 

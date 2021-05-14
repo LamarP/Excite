@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_GOALS, RECEIVE_GOAL, REMOVE_GOAL} from '../actions/goal_actions';
+import {RECEIVE_ALL_GOALS, RECEIVE_GOAL, REMOVE_GOAL, REMOVE_EXCITE} from '../actions/goal_actions';
 
 const GoalsReducer = (state={}, action) => {
     Object.freeze(state);
@@ -12,6 +12,13 @@ const GoalsReducer = (state={}, action) => {
             return nextState;
         case REMOVE_GOAL: 
             delete nextState[action._id];
+            return nextState;
+        case REMOVE_EXCITE: 
+            nextState.data.forEach((datum) => {
+                if(action.goal.data._id === datum._id) {
+                    datum.excites = action.goal.data.excites
+                }
+            })
             return nextState;
         default:
             return state;
