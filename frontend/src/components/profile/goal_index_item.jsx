@@ -25,6 +25,9 @@ class GoalIndexItem extends React.Component {
            result.push(fetchedResults.excite);
         });
         setTimeout(() => this.setState({excites: result}), 500 )
+
+        // this.setState({excites: result})
+
     };
 
   
