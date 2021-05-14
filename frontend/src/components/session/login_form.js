@@ -22,25 +22,6 @@ class LoginForm extends React.Component {
         this.a = new Audio(song);
     }
 
-    // componentWillMount() {
-    //    console.log('hello')
-    //    console.log(this.a)
-       
-    //    this.a.play();
-    // }
-
-    componentDidMount() {
-        // document.addEventListener('DOMContentLoaded')
-        // let a = document.querySelector('#myAudio');
-        // console.log(a)
-    }
-
-    // audio() {
-    //     <audio type="audio/mpeg" autoPlay >
-    //         <source src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' type="audio/ogg" />
-    //     </audio>
-    // }
-
     componentWillReceiveProps(nextProps) {
         if (nextProps.currentUser === true) {
             this.props.history.push('/profile');

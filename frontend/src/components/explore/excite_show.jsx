@@ -21,7 +21,6 @@ class ExciteShow extends React.Component {
     render() {
        if(!this.props.sounds.config) return null;
        if(!this.props.excite) return null;
-       console.log(this.props)
        return(
            <div>
                <video onClick={this.handleClick} src={this.props.excite.sceneUrl} autoPlay muted loop className='vid' type='video/mp4'></video>

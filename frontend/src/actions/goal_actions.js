@@ -3,6 +3,7 @@ import * as APIUtil from '../util/goal_util';
 export const RECEIVE_ALL_GOALS = 'RECEIVE_ALL_GOALS';
 export const RECEIVE_GOAL = 'RECEIVE_GOAL';
 export const REMOVE_GOAL = 'REMOVE_GOAL';
+export const REMOVE_EXCITE = 'REMOVE_EXCITE';
 
 // Normal actions
 
@@ -21,6 +22,11 @@ export const removeGoal = id => ({
   type: REMOVE_GOAL,
   _id: id
 });
+
+export const deleteExcite = goal => ({
+  type: REMOVE_EXCITE, 
+  goal
+})
 
 
 // Thunk actions
@@ -56,7 +62,7 @@ export const updateGoal = (goal) => dispatch => (
 );
 export const removeExcite = (goal) => dispatch => (
   APIUtil.removeExcite(goal).then(res => (
-    dispatch(receiveGoal(res))
+    dispatch(deleteExcite(res))
   ))
 );
 

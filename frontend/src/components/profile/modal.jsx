@@ -3,7 +3,6 @@ import React from 'react';
 class Modal extends React.Component {
 
     handleSubmit(exciteId) {
-        // if (this.props.goal.excites.includes(exciteId)) return
         const goal = {
             goalId: this.props.goal._id,
             title: this.props.goal.title, 
@@ -12,7 +11,8 @@ class Modal extends React.Component {
         };
         this.props.processForm(goal)
             .then(() => {
-                window.location.reload();
+                this.props.toggleForm()
+                this.props.reRender('add', exciteId)
                 return false;
             })
     };

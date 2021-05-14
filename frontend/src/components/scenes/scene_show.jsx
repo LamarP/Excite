@@ -12,13 +12,10 @@ class SceneShow extends React.Component {
   } 
 
   handleClick() {
-    //this.props.history.goBack();
     this.props.history.push('/scenes');
   }
 
   render() {
-    // debugger
-    // console.log(this.props)
     return (
       <video onClick={this.handleClick} 
       src={this.props.scenes.video_files.filter(vid => ( vid.quality === "hd"))[0].link} 
