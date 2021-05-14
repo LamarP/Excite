@@ -2,7 +2,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import GoalIndexItem from './goal_index_item';
-import GoalCreateFormContainer from './goal_create_form_container';
+// import GoalCreateFormContainer from './goal_create_form_container';
 import GoalTitleModal from './goal_title_modal';
 import ExciteModal from './excite_modal';
 
@@ -80,7 +80,10 @@ class Profile extends React.Component {
                     {createModal}
                     {exciteModal}
                 </div>
-                {goals}
+                    <div className='goal-grid-parent'>
+                        {goals}
+                    </div>
+                
                 {/* {createModal} */}
                 
             </div>

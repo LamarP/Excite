@@ -180,7 +180,7 @@ body {
 }
 
 .auth-button:hover {
-  background-color: #f6648b;
+  background-color: #f84e7b;;
   color: #ddd;
 }
 
@@ -199,6 +199,10 @@ body {
   font-size: 180px;
   font-family: 'Lobster', cursive;
   color: #f6648b;
+}
+
+.header-title:hover{
+  color: #f84e7b;
 }
 
 .navbar-parent {
@@ -288,6 +292,13 @@ body {
   margin-left: 12%;
   margin-top: 120px;
   padding-bottom: 100px;
+}
+
+.goal-grid-parent {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
 }
 
 .scene-index-item {
@@ -574,6 +585,7 @@ input#un-mute {
 
 .unmute img {
     display: none;
+    cursor: pointer;
 }
 
 input#un-mute:checked ~ .unmute img {
@@ -590,23 +602,32 @@ input#un-mute:checked ~ .mute img {
 .mute-button {
   /* position: absolute; */
   z-index: 1;
-  height: 150px;
+  height: 80px;
   /* display: flex; */
   /* justify-content: center; */
   /* top: 3%;
   right: 3%; */
+  cursor: pointer;
 }
 .mute-button img {
   height: 50px;
   width: 50px;
-  margin-top: 12px;
-  margin-bottom: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
+
 
 label.mute {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
+
+label.unmute {
+  cursor: pointer;
+}
+
 
 .pink-circle {
   position: absolute;
@@ -618,6 +639,11 @@ label.mute {
   background-color: rgb(246, 100, 139);
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+
+.pink-circle:hover {
+  background-color: #f84e7b;
 }
 
 .excite-index-item-title {
@@ -644,7 +670,9 @@ label.mute {
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
-
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .goal-excite-img{
@@ -652,7 +680,7 @@ label.mute {
 }
 
 .goal-item-container{
-  width: 30%;
+  /* width: 30%; */
 }
 
 .goal-create-button {
@@ -663,7 +691,6 @@ label.mute {
   cursor: pointer;
 
 }
-
 
 .goal-create-button:hover {
   color: #ff3168;
@@ -724,6 +751,7 @@ label.mute {
   border-radius: 50%;
   background-color: rgb(246, 100, 139);
   display: inline-block;
+  margin-left: 15px;
   /* display: flex; */
   /* justify-content: center;
   align-items: center; */
@@ -832,12 +860,14 @@ label.mute {
 
 .goal-img-container {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(5, 1fr);
-  margin-right: 12%;
-  margin-left: 12%;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin-right: 12%; */
+  /* margin-left: 12%; */
   margin-top: 30px;
   margin-bottom: 40px;
+  align-self: center;
   /* display: flex;
   justify-content: space-evenly;
   align-items: center;
