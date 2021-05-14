@@ -4,11 +4,11 @@ class ModalSoundDropdown extends React.Component {
     render() {
         const soundList = this.props.sounds.map((sound, idx) => (
             <li key={idx} onClick={() => this.props.select("selectedSound", sound.slice(0, -4))}>
-                <p>{sound.slice(0, -4)}</p>
+                {/* <p>{sound.slice(0, -4)}</p> */}
             </li>
         ))
         return(
-            <ul>
+            <ul className='sound-dropdown'>
                 {soundList}
             </ul>
         )

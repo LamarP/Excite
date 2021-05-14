@@ -16,7 +16,7 @@ class ModalSceneDropdown extends React.Component {
             </li>
         ))
         return(
-            <ul>
+            <ul className='dropdown-grid'>
                 {sceneLIst}
             </ul>
             

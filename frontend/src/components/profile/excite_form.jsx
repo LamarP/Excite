@@ -59,8 +59,8 @@ class ExciteModal extends React.Component {
         return(
             <div className="modal-child">
                <div className="drop-container">
-                    <dl onClick={this.toggleSceneDropShow}>Select A Scene⬇</dl>
-                    <dl onClick={this.toggleSoundDropShow}>Select A Sound⬇</dl>
+                    <button onClick={this.toggleSceneDropShow}>Select A Scene ⬇</button>
+                    <button onClick={this.toggleSoundDropShow}>Select A Sound ⬇</button>
                     {sceneDropDown}
                     {soundDropDown}
                     <form onSubmit={this.handleSubmit}>
