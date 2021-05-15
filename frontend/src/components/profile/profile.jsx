@@ -74,11 +74,13 @@ class Profile extends React.Component {
                 <div className="goal-create-container">
                     <div className='create-div'>
                         <button className="goal-create-button" onClick={this.goalFormToggle}>+Create Goal</button>
-                    <button className="excite-create-button" onClick={this.exciteFormToggle}>+Create Excite</button>
+                        <button className="excite-create-button" onClick={this.exciteFormToggle}>+Create Excite</button>
                     </div>
                     {/* {createForm} */}
+                    
                     {createModal}
                     {exciteModal}
+                    
                 </div>
                     <div className='goal-grid-parent'>
                         {goals}
