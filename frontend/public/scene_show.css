@@ -679,9 +679,9 @@ label.unmute {
   padding-top: 20px;
 }
 
-.goal-item-container{
+/* .goal-item-container{ */
   /* width: 30%; */
-}
+/* } */
 
 .goal-create-button {
   font-size: 25px;
@@ -770,11 +770,11 @@ label.unmute {
   cursor: pointer;
 }
 
-.goal-options {
+/* .goal-options { */
   /* display: flex;
   justify-content: row; */
   /* display: inline-block; */
-}
+/* } */
 
  /* styles for the modal  */
 
