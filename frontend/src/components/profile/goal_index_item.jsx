@@ -6,12 +6,36 @@ import GoalExcite from './goal_excite';
 class GoalIndexItem extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { excites: [], openModal: false, showEditDelete: false, showDeleteForm: false}
-        this.reRender = this.reRender.bind(this)
-        this.modalToggle = this.modalToggle.bind(this)
-        this.fetchExcites = this.fetchExcites.bind(this);
+        this.state = { 
+            excites: [], 
+            openModal: false, 
+            showEditDelete: false, 
+            showDeleteForm: false, 
+            showEditForm: false, 
+            title: ''
+        };
 
+        this.reRender = this.reRender.bind(this);
+        this.modalToggle = this.modalToggle.bind(this);
+        this.fetchExcites = this.fetchExcites.bind(this);
+        this.update = this.update.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    update(key) {
+        return e => this.setState({[key]: e.currentTarget.value})
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log(this.props.goal)
+        const goal = {title: this.state.title, userId: this.props.user.id, goalId: this.props.goal._id}
+        this.props.updateGoal(goal)
+            .then(() => {
+                this.setState({showEditForm: false});
+                this.props.renderProfile();
+            });
+    };
 
     modalToggle() {
         !this.state.openModal ? this.setState({openModal: true}) : this.setState({openModal: false})
@@ -45,10 +69,13 @@ class GoalIndexItem extends React.Component {
            this.setState({showDeleteForm: true})
         } else if(action === 'close') {
             this.setState({showDeleteForm: false})
+            this.setState({showEditForm: false})
         } else if(action === 'delete') {
             this.props.deleteGoal(this.props.goal._id)
                 .then(() => this.setState({showDeleteForm: false}))
                 .then(() => this.props.renderProfile())
+        } else if(action === 'edit') {
+            this.setState({showEditForm: true})
         }
     }
 
@@ -75,7 +102,7 @@ class GoalIndexItem extends React.Component {
     render() {
         if(!this.props.goal.title) return null;
         const {goal, removeExcite} = this.props;
-        const {excites, openModal, showEditDelete, showDeleteForm} = this.state;
+        const {excites, openModal, showEditDelete, showDeleteForm, showEditForm} = this.state;
 
      
 
@@ -98,7 +125,7 @@ class GoalIndexItem extends React.Component {
             <ModalContainer key={goal._id} goal={goal} toggleForm={this.modalToggle} reRender={this.reRender} />
             </div> : null;
 
-        // delete goal form 
+        // delete goal modal 
         let showDelForm = 
             showDeleteForm ? <div onClick={() => this.handleClick('close')} className='modal-background'>
                 <div className="modal-child" id="goal-delete-modal" onClick={e => e.stopPropagation()}>
@@ -107,6 +134,19 @@ class GoalIndexItem extends React.Component {
                     <button className="delete-form-btn" onClick={() => this.handleClick('close')}>No</button>
                 </div>
             </div> : null;
+
+        // edit goal modal
+        let editForm = 
+            showEditForm ? <div onClick={() => this.handleClick('close')} className='modal-background'>
+                <div className='modal-child' id="goal-edit-modal" onClick={e => e.stopPropagation()}>
+                    <div className='modal-create-goal-title'><h1>Edit Goal</h1></div>
+                    <form className='goal-create-form' onSubmit={this.handleSubmit}>
+                        <input type="text" placeholder="Goal Title" onChange={this.update('title')} maxLength="8"/>
+                        <input type="hidden" value={this.props.user.id} />
+                        <button className="goal-create-submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div> : <div></div>;
 
         // excite images/links
         const exciteLinks = goal.excites.map((exciteId, idx) => {
@@ -125,6 +165,7 @@ class GoalIndexItem extends React.Component {
                     </div>
                     {exciteModal}
                     {showDelForm}
+                    {editForm}
                 </div>
             )
         } else {
@@ -135,7 +176,8 @@ class GoalIndexItem extends React.Component {
                         {exciteLinks}
                     </div>
                     {exciteModal}
-                     {showDelForm}
+                    {showDelForm}
+                    {editForm}
                 </div>
             )
         }

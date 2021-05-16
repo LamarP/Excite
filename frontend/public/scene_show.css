@@ -1072,3 +1072,7 @@ label.unmute {
   margin-left: auto;
   margin-right: auto;
 }
+
+#goal-edit-modal {
+  height: 50%;
+}
