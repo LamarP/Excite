@@ -35,7 +35,7 @@ class GoalCreateForm extends React.Component {
             <div className="goal-create-container">
                 <form className="goal-create-form" onSubmit={this.handleSubmit}>
                     <label>
-                        <input type="text" placeholder="Goal Title" onChange={this.update("title")} />
+                        <input type="text" placeholder="Goal Title" onChange={this.update("title")} maxLength="8"/>
                     </label>
 
                     <input type="hidden" value={this.props.user.id}/>

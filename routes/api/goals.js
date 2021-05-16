@@ -30,6 +30,7 @@ router.patch('/goal/excite', (req, res) => {
 });
 
 router.delete('/goal', (req, res) => {
+  console.log(req)
   GoalsController.deleteGoal(req.query.goalId)
     .then((_id) => res.send({_id}))
     .catch(() => res.status(404).json({msg: 'Could not find goal'}))
