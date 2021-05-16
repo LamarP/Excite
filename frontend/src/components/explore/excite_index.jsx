@@ -11,9 +11,12 @@ export default class ExciteIndex extends React.Component {
             <ExciteIndexItem key={idx} idx={idx} excite={excite}/>
         ));
         return(
+            <div className="excite-index-container">
+                <button className="excite-create-button">+Create Excite</button>
                 <ul className='scene-index' >
                     {exciteIndex}
                 </ul>
+            </div>
         )
     }
 }

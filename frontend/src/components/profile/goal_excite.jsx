@@ -28,11 +28,6 @@ class GoalExcite extends React.Component{
             excites: exciteId
         }
         this.props.reRender('remove', newGoal)
-        // this.props.removeExcite(newGoal)
-        //     .then((res) => {
-        //         this.props.reRender('remove');
-        //         return false;
-        //     })
     
     }
     

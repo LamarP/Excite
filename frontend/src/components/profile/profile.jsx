@@ -58,6 +58,7 @@ class Profile extends React.Component {
                 fetchExcite={this.props.fetchExcite} 
                 user={this.props.user} 
                 removeExcite={this.props.removeExcite}
+                deleteGoal={this.props.deleteGoal}
                 renderProfile={this.renderProfile}
             />
         ));

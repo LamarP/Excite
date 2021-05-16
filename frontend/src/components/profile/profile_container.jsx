@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import {fetchUserGoals, removeExcite} from '../../actions/goal_actions';
+import {fetchUserGoals, removeExcite, deleteGoal} from '../../actions/goal_actions';
 import {fetchExcite, fetchExcites} from '../../actions/excite_actions';
 import Profile from './profile';
 
@@ -14,6 +14,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => {
     return {
        fetchUserGoals: userId => dispatch(fetchUserGoals(userId)), 
+       deleteGoal: id => dispatch(deleteGoal(id)),
        removeExcite: goal => dispatch(removeExcite(goal)),
        fetchExcite: exciteId => dispatch(fetchExcite(exciteId)), 
        fetchExcites: excites => dispatch(fetchExcites(excites))
