@@ -1,27 +1,27 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
 
 class About extends React.Component {
 
   render() {
     const devs = [
       {
-        name: 'Lamar', 
+        name: 'Lamar Poole', 
         git: 'https://github.com/LamarP', 
         link: 'https://www.linkedin.com/in/lamar-poole-19148b96/'
       },
       {
-        name: 'Frank', 
+        name: 'Frank Mendez', 
         git: 'https://github.com/frmendez21', 
         link: 'https://www.linkedin.com/in/frank-mendez-96025a1b3/',
         angel: 'https://angel.co/u/frank-mendez-1'
       },
       {
-        name: 'Reginald', 
+        name: 'Reginald Dunlap', 
         git: 'https://github.com/Flatout007'
       },
       {
-        name: 'Terry', 
+        name: 'Terry Thind', 
         git: 'https://github.com/terryt925', 
         link: 'www.linkedin.com/in/terry-thind-42a8591a1',
         angel: 'https://angel.co/u/terry-thind'
@@ -29,55 +29,43 @@ class About extends React.Component {
     ]
 
     return(
-      <div>
+      <div className="about-container">
 
-        <h1>About</h1>
+        <h1 className="about-head">About</h1>
 
-        <p>Have you ever felt unmotivated, unprepared for the day, or generally 
+        <p className="about-intro">Have you ever felt unmotivated, unprepared for the day, or generally 
           unexcited? Then we have the perfect app for you! Get excited with 
-          Excite!!!
+          Excite!!! <br />
+          Excite tackles the problem mentioned above. Excite aims to get you motivated for any activity or chore you're 
+            dreading, by providing you with adrenaline-inducing jams and 
+            scenery. Stimulating your senses to bring out your inner beast to tackle 
+            any task in your path. Choose from premade scenes paired with music and motivational 
+            speeches or mix and match scenes and sounds of your choosing. Excite was built using the MERN stack: MongoDB, Express, React, Node
         </p>
 
-        <ul>
+        <h1 className="about-head">Meet The Devs</h1>
+        <div className="meet-dev-container">
+          {devs.map((dev, idx) => (
+              <div key={idx} className="about-dev-container">
+                <p className="about-dev-name">{dev.name}</p>
 
-          <li>Excite tackles the problem mentioned above.</li>
+                <a href={dev.git} target='_blank' rel="noreferrer" className="about-dev-link" >
+                  <i className="fab fa-github"></i>
+                </a>
 
-          <li>Excite aims to get you motivated for any activity or chore you're 
-            dreading, by providing you with adrenaline-inducing jams and 
-            scenery.
-          </li>
-
-          <li>Stimulating your senses to bring out your inner beast to tackle 
-            any task in your path.
-          </li>
-
-          <li>Choose from premade scenes paired with music and motivational 
-            speeches or mix and match scenes and sounds of your choosing.
-          </li>
-
-        </ul>
-
-        <p>Excite was built using the MERN stack: MongoDB, Express, React, Node.</p>
-
-        {devs.map(dev => (
-            <div>
-              <p>{dev.name}</p>
-
-              <a href={dev.git} target='_blank'>
-                <i class="fab fa-github"></i>
-              </a>
-              
-              <a href={dev.link} target='_blank'>
-                <i class="fab fa-linkedin"></i>
-              </a>
+                <a href={dev.link} target='_blank' rel="noreferrer" className="about-dev-link">
+                  <i className="fab fa-linkedin"></i>
+                </a>
 
 
-              <a href="">
-                <i class="fab fa-angellist"></i>
-              </a>
+                <a href={dev.angel} target='_blank' rel="noreferrer" className="about-dev-link">
+                  <i className="fab fa-angellist"></i>
+                </a>
 
-            </div>
-          ))}
+              </div>
+            ))}
+
+        </div>
 
       </div>
     )
