@@ -64,7 +64,7 @@ class ExciteModal extends React.Component {
                     {sceneDropDown}
                     {soundDropDown}
                     <form className="goal-create-form" onSubmit={this.handleSubmit}>
-                            <input id="title" type="text" placeholder="Title" onChange={this.update("title")}/>
+                            <input id="title" type="text" placeholder="Title" onChange={this.update("title")} maxLength="10"/>
                         <button type="submit">Submit</button>
                     </form>
                </div>

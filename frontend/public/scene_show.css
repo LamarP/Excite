@@ -803,7 +803,7 @@ label.unmute {
   /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 16px;
   /* background: #fff; */
-  background-color: rgba(240,240,240,0.2);
+  background-color: rgba(240,240,240,0.5);
   width: 492px;
   height: 595px;
   overflow: scroll;
@@ -818,7 +818,7 @@ label.unmute {
   /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 16px;
   /* background: #fff; */
-  background-color: rgba(240,240,240,0.2);
+  background-color: rgba(240,240,240,0.7);
   width: 492px;
   height: 295px;
   /* overflow: scroll; */
@@ -833,7 +833,7 @@ label.unmute {
   /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 16px;
   /* background: #fff; */
-  background-color: rgba(240,240,240,0.2);
+  background-color: rgba(240,240,240,0.7);
   width: 492px;
   height: 295px;
   /* overflow: scroll; */
@@ -851,11 +851,14 @@ label.unmute {
   border: 2px solid black;
   margin-top: 40px;
   font-size: 25px;
-  color: ghostwhite;
+  /* color: ghostwhite; */
+  color: black;
+  text-align: center;
 }
 
 .goal-create-form input[type=text]::placeholder {
-  color: rgba(248, 248, 255, 0.548);
+  /* color: rgba(248, 248, 255, 0.76); */
+  color: black;
   text-align: center;
   padding: 5px;
 }
@@ -863,7 +866,12 @@ label.unmute {
 .modal-child::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
 }
-
+#delete-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
 
 .goal-img-container {
   display: grid;
@@ -917,7 +925,8 @@ label.unmute {
   background-color: rgba(14, 14, 14, 0.95);
   /* height: 18px; */
   padding-top: 15px;
-  
+  position: relative;
+  z-index: 1;
   /* padding-left: 12px;
   padding-right: 20px; */
   padding-bottom: 20px;
@@ -980,7 +989,7 @@ label.unmute {
 }
 
 .fas{
-  color: rgb(245, 80, 124);
+  color: white;
   position: fixed;
   bottom: -40px;
   transform: scale(1.7);
@@ -988,8 +997,10 @@ label.unmute {
   padding-left: 15px;
   padding-bottom: 10px;
   padding-right: 15px;
-
-
+  cursor: pointer;
+}
+.fas:hover{
+  color:rgb(246, 100, 139)
 }
 
 .drop-container {
@@ -1028,17 +1039,16 @@ label.unmute {
 }
 
 .drop-container button {
-  /* display: block; */
   width: 200px;
-
-    margin-left: 150px;
-    margin-right: 150px;
-    cursor: pointer;
-    
-    border: none;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
   outline:  none;
   height: 40px;
   background: #f6648bd3;
+  color: white;
   font-size: 14px;
   font-weight: bold;
    margin-bottom: 20px;
@@ -1057,6 +1067,9 @@ label.unmute {
   color: white;
   top: 20px;
 }
+.edit-delete-goal > .fas:hover {
+  color:rgb(246, 100, 139)
+}
 .edit-delete-goal > #edit {
   left: 0;
 }
@@ -1066,10 +1079,12 @@ label.unmute {
 
 .delete-form-prompt {
   color: white;
-  background-color: #40434E;
+  background-color: rgba(14, 14, 14, 0.95);
+  border-bottom: 1px solid white;
   text-align: center;
   font-size: 25px;
   font-family:sans-serif;
+  padding: 20px;
 }
 
 .delete-form-btn {
@@ -1087,7 +1102,8 @@ label.unmute {
 }
 
 .goal-item-container > .modal-background > #goal-delete-modal {
-  height: 30%;
+  height: 40%;
+  background-color: rgba(240,240,240,0.7)
 }
 
 .excite-index-container > .excite-create-button {
@@ -1146,6 +1162,7 @@ label.unmute {
 }
 #goal-edit-modal {
   height: 50%;
+  background-color: rgba(240,240,240,0.7)
 }
 
 .spinner {

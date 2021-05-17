@@ -130,8 +130,8 @@ class GoalIndexItem extends React.Component {
             showDeleteForm ? <div onClick={() => this.handleClick('close')} className='modal-background'>
                 <div className="modal-child" id="goal-delete-modal" onClick={e => e.stopPropagation()}>
                     <h3 className="delete-form-prompt">Are you sure you want to delete this goal?</h3>
-                    <button className="delete-form-btn" onClick={() => this.handleClick('delete')}>Yes</button>
-                    <button className="delete-form-btn" onClick={() => this.handleClick('close')}>No</button>
+                    <button className="goal-create-submit" id="delete-btn" onClick={() => this.handleClick('delete')}>Yes</button>
+                    <button className="goal-create-submit" id="delete-btn" onClick={() => this.handleClick('close')}>No</button>
                 </div>
             </div> : null;
 
