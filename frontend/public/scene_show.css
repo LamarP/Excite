@@ -714,8 +714,7 @@ label.unmute {
 .goal-create-submit {
   color: white;
   cursor: pointer;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 60px;
   /* background-color: black; */
 
   border: none;
@@ -797,7 +796,7 @@ label.unmute {
   /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 16px;
   /* background: #fff; */
-  background-color: rgba(14, 14, 14, 0.8);
+  background-color: rgba(240,240,240,0.2);
   width: 492px;
   height: 595px;
   overflow: scroll;
@@ -812,9 +811,9 @@ label.unmute {
   /* font: 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 16px;
   /* background: #fff; */
+  background-color: rgba(240,240,240,0.2);
   width: 492px;
-  height: 350px;
-  background-color: rgba(14, 14, 14, 0.7);
+  height: 295px;
   /* overflow: scroll; */
   border-radius: 16px;
 }
@@ -842,18 +841,16 @@ label.unmute {
 }
 
 .goal-create-form input[type=text] {
-  border: 2px solid white;
+  border: 2px solid black;
   margin-top: 40px;
   font-size: 25px;
-  text-align: center;
   color: ghostwhite;
 }
 
 .goal-create-form input[type=text]::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(248, 248, 255, 0.548);
   text-align: center;
   padding: 5px;
-
 }
 
 .modal-child::-webkit-scrollbar { 
@@ -910,12 +907,15 @@ label.unmute {
 
 .modal-create-goal-title {
   width: 100%;
+  background-color: rgba(14, 14, 14, 0.95);
   /* height: 18px; */
   padding-top: 15px;
   /* padding-left: 12px;
   padding-right: 20px; */
   padding-bottom: 20px;
+  border-bottom: 1px solid #ededed;
   text-align: center;
+  color: rgb(246, 100, 139);
   display: flex;
   justify-content: center;
   font-size: 40px;
@@ -924,37 +924,29 @@ label.unmute {
   border-radius: 16px 16px 0 0;
 }
 
-
-
 .modal-excite-list-title {
   width: 100%;
-  background-color: rgba(14, 14, 14, 0.7);
+  background-color: rgba(14, 14, 14, 0.95);
   /* height: 18px; */
   padding-top: 15px;
   padding-left: 12px;
   padding-right: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgb(255, 255, 255, 0.99);
+  border-bottom: 1px solid #ededed;
   text-align: center;
-  
+  color: rgb(246, 100, 139);
   display: flex;
   justify-content: center;
   font-size: 40px;
   /* margin-top: 10px; */
 }
-.modal-excite-list-title > h1 {
-  color: rgb(246, 100, 139);
+
+.modal-excite-list-title h1 {
   font-family: 'Lobster', cursive;
 }
 
 .modal-create-goal-title h1{
-  position: relative;
-  width: 100%;
-  z-index: 20;
-  color:rgb(246, 100, 139, 1);
   font-family: 'Lobster', cursive;
-  border-bottom: 1px solid white;
-  padding-bottom: 20px;
 }
 
 .modal-excite-list-item:hover {
@@ -980,7 +972,7 @@ label.unmute {
 }
 
 .fas{
-  color: white;
+  color: rgb(245, 80, 124);
   position: fixed;
   bottom: -40px;
   transform: scale(1.7);
@@ -988,18 +980,16 @@ label.unmute {
   padding-left: 15px;
   padding-bottom: 10px;
   padding-right: 15px;
+
+
 }
-.fas:hover {
-  color:rgb(246, 100, 139)
-}
+
 .drop-container {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;
   text-align: center;
-    margin-top: 115px;
-    background-color: rgba(14, 14, 14, 0.7);
 }
 
 
@@ -1017,21 +1007,24 @@ label.unmute {
 .drop-container button {
   /* display: block; */
   width: 200px;
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: none;
+
+    margin-left: 150px;
+    margin-right: 150px;
+    cursor: pointer;
+    
+    border: none;
   outline:  none;
   height: 40px;
   background: #f6648bd3;
-  color: white;
   font-size: 14px;
   font-weight: bold;
    margin-bottom: 20px;
 
 }
 
+.drop-container {
+  padding-top: 115px;
+}
 .edit-delete-goal {
   position: relative;
 }
@@ -1040,10 +1033,6 @@ label.unmute {
   position: absolute;
   color: white;
   top: 20px;
-}
-.edit-delete-goal > .fas:hover {
-  color:rgb(246, 100, 139);
-  cursor: pointer;
 }
 .edit-delete-goal > #edit {
   left: 0;
@@ -1054,34 +1043,28 @@ label.unmute {
 
 .delete-form-prompt {
   color: white;
-  background-color: rgba(14, 14, 14, 0.95);
+  background-color: #40434E;
   text-align: center;
   font-size: 25px;
   font-family:sans-serif;
-  border-bottom: 1px solid white;
-  margin-top: 30px;
-  padding-bottom: 30px;
 }
 
 .delete-form-btn {
-  width: 200px;
-  margin-left: 150px;
-  margin-right: 150px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: none;
-  outline:  none;
-  height: 40px;
-  background: #f6648bd3;
+  font-size: 16px;
+  font-weight: bolder;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
-   margin-bottom: 20px;
-
+  font-family:sans-serif;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 25%;
+  margin-top: 20px;
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .goal-item-container > .modal-background > #goal-delete-modal {
-  height: 50%;
+  height: 30%;
 }
 
 .excite-index-container > .excite-create-button {

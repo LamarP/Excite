@@ -1,41 +1,30 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import { Link, withRouter } from 'react-router-dom';
-import spinner from '../../loader.gif';
 
 class SoundShow extends React.Component {
   constructor(props) {
     super(props)
     this.state = { 
-      title: '',
-      loading: false
+      title: ''
     }
 
   }
 
   componentDidMount() {
-    this.setState({ loading: true})
     if(this.props.sound) {
       this.props.fetchSound(this.props.sound.slice(0, -4))
-        .then(() => {
-          this.setState({
-            // title: this.props.sound.slice(0, -4),
-            loading: false
-          })
-      })
+      this.setState({title: this.props.sound.slice(0, -4)})
     }
   
   }
 
   render() {
     if(!this.props.sounds.config) {return null}
-    if (this.state.loading) {
-      return <img src={spinner} alt="" />
-    } else {
 
     return (
       <div>
-        {/* <h3>{this.state.title}</h3> */}
+        <h3>{this.state.title}</h3>
         <ReactAudioPlayer
           src={this.props.sounds.config.url}
           id="audio-player"
@@ -50,7 +39,6 @@ class SoundShow extends React.Component {
 
       </div>
     )
-    }
   }
 }
 
