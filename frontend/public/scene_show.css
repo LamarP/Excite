@@ -679,9 +679,9 @@ label.unmute {
   padding-top: 20px;
 }
 
-.goal-item-container{
+/* .goal-item-container{ */
   /* width: 30%; */
-}
+/* } */
 
 .goal-create-button {
   font-size: 25px;
@@ -770,11 +770,11 @@ label.unmute {
   cursor: pointer;
 }
 
-.goal-options {
+/* .goal-options { */
   /* display: flex;
   justify-content: row; */
   /* display: inline-block; */
-}
+/* } */
 
  /* styles for the modal  */
 
@@ -1073,6 +1073,54 @@ label.unmute {
   margin-right: auto;
 }
 
+
+.about-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0,0,0,0.6);
+  margin-top: 50px;
+}
+
+.about-intro{
+  color: white;
+  font-family: 'Helvetica Neue';
+  font-weight: bolder;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-head {
+  color: rgb(246, 100, 139);
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+.meet-dev-container {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.about-dev-name {
+  color:rgb(246, 100, 139);
+  font-size: 30px;
+  font-family: 'Lobster';
+  text-align: center;
+}
+.about-dev-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:5px;
+}
+.about-dev-link {
+  color: white;
+  align-self: center;
+  font-size: 20px;
+  padding: 5px;
+}
 #goal-edit-modal {
   height: 50%;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
-
+import AboutPage from './about/about';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import NavBarContainer from './nav/navbar_container';
@@ -40,6 +40,7 @@ const App = () => (
         <ProtectedRoute exact path="/explore" component={ExcitesIndexContainer} />
         <ProtectedRoute exact path="/explore/:id" component={ExciteShowContainer} />
         <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+        <ProtectedRoute exact path="/about" component={AboutPage} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <ProtectedRoute exact path='/sounds' component={SoundsIndexContainer} />
