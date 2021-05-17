@@ -24,10 +24,11 @@ class About extends React.Component {
       },
       {
         name: 'Terry Thind', 
-        git: 'https://github.com/terryt925', 
+        git: 'https://github.com/terryt925',
         link: 'www.linkedin.com/in/terry-thind-42a8591a1',
         angel: 'https://angel.co/u/terry-thind', 
         image: terry
+
       }
     ]
 
