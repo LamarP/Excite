@@ -1125,3 +1125,10 @@ label.unmute {
 #goal-edit-modal {
   height: 50%;
 }
+
+.spinner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
