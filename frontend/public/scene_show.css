@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 /* styles for the scenes */
 * {
