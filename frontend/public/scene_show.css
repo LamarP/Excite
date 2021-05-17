@@ -1073,6 +1073,7 @@ label.unmute {
   margin-right: auto;
 }
 
+
 .about-container {
   width: 80%;
   margin-left: auto;
@@ -1119,4 +1120,7 @@ label.unmute {
   align-self: center;
   font-size: 20px;
   padding: 5px;
+}
+#goal-edit-modal {
+  height: 50%;
 }
