@@ -1,7 +1,7 @@
 import React from 'react';
 import ModalSceneDropdown from './modal_scene_dropdown';
 import ModalSoundDropdown from './modal_sound_dropdown';
-
+import {withRouter} from 'react-router-dom';
 class ExciteModal extends React.Component {
     constructor(props) {
         super(props)
@@ -37,7 +37,7 @@ class ExciteModal extends React.Component {
                 sounds: this.state.selectedSound + '.mp3'
             };
             this.props.processForm(excite).then((res) => {
-                window.location.reload();
+                this.props.history.push('/explore')
                 return false;
             })
         }
@@ -73,4 +73,4 @@ class ExciteModal extends React.Component {
     }
 }
 
-export default ExciteModal;
+export default withRouter(ExciteModal);

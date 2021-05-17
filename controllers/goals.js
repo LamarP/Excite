@@ -33,7 +33,7 @@ const GoalsController = {
       userId: payload.userId, 
       $pull: {excites: payload.excites}
     });
-    return goal;
+    return Goal.findById(goalId)
   },
   deleteGoal: async(goalId) => {
       const goal = await Goal.deleteOne({_id: goalId});

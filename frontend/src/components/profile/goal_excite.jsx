@@ -20,17 +20,14 @@ class GoalExcite extends React.Component{
     }
     handleClick(e) {
         e.preventDefault();
-        const goal = {
-            title: this.props.goal.title, 
-            userId: this.props.goal.userId, 
-            goalId: this.props.goal._id,
-            excites: this.props.exciteId
+        const {goal, exciteId} = this.props;
+        const newGoal = {
+            title: goal.title, 
+            userId: goal.userId, 
+            goalId: goal._id,
+            excites: exciteId
         }
-        this.props.removeExcite(goal)
-            .then((res) => {
-                window.location.reload();
-                return false;
-            })
+        this.props.reRender('remove', newGoal)
     
     }
     

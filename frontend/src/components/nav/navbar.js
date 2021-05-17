@@ -29,6 +29,7 @@ class NavBar extends React.Component {
                             <li><Link className='link' to={'/explore'}>Explore</Link></li>
                             <li><Link className='link' to={'/scenes'}>Scenes</Link></li>
                             <li><Link className='link' to={'/sounds'}>Sounds</Link></li>
+                            <li><Link className='link' to={'/about'}>About</Link></li>
                     </ul>   
                  </div>
                       <video 

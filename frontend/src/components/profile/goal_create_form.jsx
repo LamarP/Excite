@@ -18,7 +18,8 @@ class GoalCreateForm extends React.Component {
         };
         this.props.processForm(goal)
             .then((res) => {
-                window.location.reload();
+                this.props.toggleForm();
+                this.props.fetch(this.props.user.id)
                 return false;
             })
     }
@@ -29,11 +30,12 @@ class GoalCreateForm extends React.Component {
 
     render() {
         if(!this.props.user) return null;
+     
         return(
             <div className="goal-create-container">
                 <form className="goal-create-form" onSubmit={this.handleSubmit}>
                     <label>
-                        <input type="text" placeholder="Goal Title" onChange={this.update("title")} />
+                        <input type="text" placeholder="Goal Title" onChange={this.update("title")} maxLength="8"/>
                     </label>
 
                     <input type="hidden" value={this.props.user.id}/>

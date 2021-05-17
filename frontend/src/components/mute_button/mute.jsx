@@ -13,13 +13,10 @@ class Mute extends React.Component {
     } else {
       audio.muted = false;
     }
-    // console.log(audio)
   }
 
   render() {
-    // let audio = document.querySelector('#myAudio');
     return (
-      // <button onClick={this.muteClick}>Mute</button>
       <div className='pink-circle'>
         <div className="mute-button" >
           <input type="checkbox" name="un-mute" id="un-mute" onClick={this.muteClick}/>
