@@ -1,5 +1,5 @@
 import React from 'react';
-
+import terry from '../../terry_thind.jpeg'
 
 class About extends React.Component {
 
@@ -18,13 +18,16 @@ class About extends React.Component {
       },
       {
         name: 'Reginald Dunlap', 
-        git: 'https://github.com/Flatout007'
+        git: 'https://github.com/Flatout007',
+        link: 'https://www.linkedin.com/in/reginald-dunlap-591612202/',
+        angel: 'https://angel.co/u/reggie-dunn'
       },
       {
         name: 'Terry Thind', 
         git: 'https://github.com/terryt925', 
         link: 'www.linkedin.com/in/terry-thind-42a8591a1',
-        angel: 'https://angel.co/u/terry-thind'
+        angel: 'https://angel.co/u/terry-thind', 
+        image: terry
       }
     ]
 
@@ -62,6 +65,7 @@ class About extends React.Component {
                   <i className="fab fa-angellist"></i>
                 </a>
 
+                <img className="about-dev-image" src={dev.image} alt="" height="200" width="200"/>
               </div>
             ))}
 
