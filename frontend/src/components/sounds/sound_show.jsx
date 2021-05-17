@@ -28,10 +28,10 @@ class SoundShow extends React.Component {
   }
 
   render() {
-    if(!this.props.sounds.config) {return null}
+    // if(!this.props.sounds.config) {return null}
     if (this.state.loading) {
       return <img src={spinner} alt="" />
-    } else {
+    } else if (this.props.sounds.config) {
 
     return (
       <div>
@@ -50,6 +50,8 @@ class SoundShow extends React.Component {
 
       </div>
     )
+    } else {
+      return null;
     }
   }
 }
