@@ -299,7 +299,9 @@ body {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .scene-index-item {
@@ -671,9 +673,11 @@ label.unmute {
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  border-radius: 16px 16px 0 0;
+  /* width: 90%; */
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+  background-color: rgba(0,0,0,.2);
 }
 
 .goal-excite-img{
@@ -687,10 +691,11 @@ label.unmute {
 .goal-create-button {
   font-size: 25px;
   color: white;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   font-family: 'Lobster', cursive;
   cursor: pointer;
-
+  /* width: 100%; */
+  /* display: block; */
 }
 
 .goal-create-button:hover {
@@ -702,9 +707,10 @@ label.unmute {
 }
 
 .excite-create-button {
+  /* display: block; */
   font-size: 25px;
   color: white;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   font-family: 'Lobster', cursive;
   cursor: pointer;
 }
@@ -911,6 +917,7 @@ label.unmute {
   background-color: rgba(14, 14, 14, 0.95);
   /* height: 18px; */
   padding-top: 15px;
+  
   /* padding-left: 12px;
   padding-right: 20px; */
   padding-bottom: 20px;
@@ -1002,7 +1009,22 @@ label.unmute {
 
 .create-div {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-div button {
+  /* display: block; */
+  width: fit-content;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px 12px 12px 12px;
+  background-color: rgba(0,0,0,.2);
+}
+
+.create-div button:hover {
+  transform: scale(1.05);
 }
 
 .drop-container button {
