@@ -37,8 +37,9 @@ class About extends React.Component {
 
         <p className="about-intro">Have you ever felt unmotivated, unprepared for the day, or generally 
           unexcited? Then we have the perfect app for you! Get excited with 
-          Excite!!! <br />
-          Excite tackles the problem mentioned above. Excite aims to get you motivated for any activity or chore you're 
+          Excite!!!
+        </p>
+        <p className="about-intro">Excite tackles the problem mentioned above. Excite aims to get you motivated for any activity or chore you're 
             dreading, by providing you with adrenaline-inducing jams and 
             scenery. Stimulating your senses to bring out your inner beast to tackle 
             any task in your path. Choose from premade scenes paired with music and motivational 
