@@ -18,12 +18,14 @@ class About extends React.Component {
       },
       {
         name: 'Reginald Dunlap', 
-        git: 'https://github.com/Flatout007'
+        git: 'https://github.com/Flatout007',
+        link: 'https://www.linkedin.com/in/reginald-dunlap-591612202/',
+        angel: 'https://angel.co/u/reggie-dunn'
       },
       {
         name: 'Terry Thind', 
         git: 'https://github.com/terryt925', 
-        link: 'www.linkedin.com/in/terry-thind-42a8591a1',
+        link: 'https://www.linkedin.com/in/terry-thind-42a8591a1',
         angel: 'https://angel.co/u/terry-thind'
       }
     ]
