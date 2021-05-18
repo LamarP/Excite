@@ -679,6 +679,7 @@ label.unmute {
   /* margin-left: 5%; */
   /* margin-right: 5%; */
   background-color: rgba(0,0,0,.2);
+  padding-top: 10px;
 }
 
 .goal-excite-img{
