@@ -33,7 +33,8 @@ class NavBar extends React.Component {
                     </ul>   
                  </div>
                       <video 
-                        src="https://player.vimeo.com/external/370845105.hd.mp4?s=1facf7310d1f043ea079556373d0618003593f2d&profile_id=173&oauth2_token_id=57447761"
+                        // src="https://player.vimeo.com/external/370845105.hd.mp4?s=1facf7310d1f043ea079556373d0618003593f2d&profile_id=173&oauth2_token_id=57447761"
+                        src= 'https://player.vimeo.com/external/370845105.sd.mp4?s=b9419e54cff17ff6aec0f50e194d3e4e92a06129&profile_id=165&oauth2_token_id=57447761'
                         autoPlay muted loop className='session-vid' type='video/mp4'>
                     </video>
                 </div>   
@@ -46,7 +47,8 @@ class NavBar extends React.Component {
                 vid =   <div></div>;
             } else {
                 vid =   <video onClick={this.handleClick}
-                            src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
+                            src='https://player.vimeo.com/external/324296639.sd.mp4?s=2147b8e13b0e79ecaf0bcb2458b294bb383e628a&profile_id=165&oauth2_token_id=57447761'
+                            // src="https://player.vimeo.com/external/324296639.hd.mp4?s=be09dbee33427d61902b888b25a9c13ac32c8659&profile_id=175&oauth2_token_id=57447761"
                             autoPlay muted loop className='session-vid' type='video/mp4'>
                         </video>;
             }
