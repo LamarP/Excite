@@ -669,8 +669,7 @@ label.unmute {
   text-align: center;
   font-size: 50px;
   /* font-family: Helvetica Neue; */
-    font-family: 'Lobster', cursive;
-
+  font-family: 'Lobster', cursive;
   color: white;
   border-bottom: 1px solid white;
   padding-bottom: 10px;

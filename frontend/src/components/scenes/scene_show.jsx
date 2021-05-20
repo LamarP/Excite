@@ -28,7 +28,7 @@ class SceneShow extends React.Component {
     } 
     return (
       <video onClick={this.handleClick} 
-      src={this.props.scenes.video_files.filter(vid => ( vid.quality === "hd"))[0].link} 
+      src={this.props.scenes.video_files.filter(vid => ( vid.quality === "sd"))[0].link} 
       autoPlay muted loop className='vid' type='video/mp4'></video>
       
     )
